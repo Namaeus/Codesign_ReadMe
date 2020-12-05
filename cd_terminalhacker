@@ -1,0 +1,27 @@
+---
+
+
+---
+
+<h2 id="set-up-instructions">SET UP INSTRUCTIONS</h2>
+<p><strong>1.</strong> Unzip the <code>cd_terminalhacker.zip</code> folder.<br>
+<strong>2.</strong> Paste your Authorisation Token into the file named <code>authorization</code>. This is located inside the main <code>cd_terminalhacker</code> folder.<br>
+<strong>3.</strong> Install the SQL file. This is located inside the <code>READ_ME_AFTER_PURCHASING</code> folder, it is named <code>cd_terminalhacker_SQLFILE</code>.<br>
+<strong>4.</strong> Add the script to your server start config: <code>start cd_terminalhacker</code>. The name of the folder must not be changed or the script will not function correctly.</p>
+<h3 id="example">Example</h3>
+<p><em>The code below can only be placed inside a client file, not a server file.</em></p>
+<pre><code>local example = exports['cd_terminalhacker']:StartTerminalHacking()
+if example.success then
+	print('im a winner')
+	print(example.time) --Returns the amount of time taken to complete (in seconds).
+	print(example.score) --Returns the score. (You gain a higher score from downloading more optional files).
+else
+	print('i suck so bad')
+end
+</code></pre>
+<p><strong>About the game</strong><br>
+The point of the hacking game is to find the proper .exe file somewhere in a remote pc’s directory.<br>
+Some .exe files are corrupted and will set you back. (You need to figure which are which)<br>
+Along your search path you are supposed to download additional files from the file system and gain score.<br>
+Score and time taken determine the leaderboard placement, and the server owner can set their own actions based on time and score.</p>
+
