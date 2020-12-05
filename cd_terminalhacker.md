@@ -19,7 +19,9 @@ else
 	print('i suck so bad')
 end
 ```
+
 **About the game**
+
 The point of the hacking game is to find the proper .exe file somewhere in a remote pc's directory.
 Some .exe files are corrupted and will set you back. (You need to figure which are which)
 Along your search path you are supposed to download additional files from the file system and gain score.
