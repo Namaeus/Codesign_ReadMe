@@ -1,8 +1,11 @@
 ## SET UP INSTRUCTIONS
 **1.** Unzip the `cd_terminalhacker.zip` folder.
- **2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_terminalhacker` folder.
- **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it is named `cd_terminalhacker_SQLFILE`.
- **4.** Add the script to your server start config: `start cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
+
+**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_terminalhacker` folder.
+
+**3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it is named `cd_terminalhacker_SQLFILE`.
+
+**4.** Add the script to your server start config: `start cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
 ### Example
 *The code below can only be placed inside a client file, not a server file.*
