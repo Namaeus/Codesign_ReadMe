@@ -8,7 +8,7 @@
 **4.** Add the script to your server start config: `start cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
 ### Example
-*The code below can only be placed inside a client file, not a server file.*
+*The code below can only be placed inside a client.lua file, not a server.lua file.*
 ```
 local example = exports['cd_terminalhacker']:StartTerminalHacking()
 if example.success then
