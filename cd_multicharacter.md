@@ -14,7 +14,7 @@
  **7.** Add the script to your server start config: `start cd_multicharacter`. The name of the folder must not be changed or the script will not function correctly.
 
 ## Step 1
-First we will need to do a small edit to stop es_extended spawning in our character instantly.
+First we will need to do a small edit to stop es_extended regestering our character instantly instantly.
 
 **ESX version 1.1 - essentialmode/client/main.lua/line 5 - hashout/remove this code.**
 
