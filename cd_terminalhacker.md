@@ -7,7 +7,7 @@
 
  **4.** Before starting the script, please read the `config.lua` (this is located inside the main cd_terminalhacker folder) and the `config.js` (this is located inside html/js folder) and configure the script to suit your servers needs.
  
- **5.** **WARNING** do not delete any files, do not change file names and do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+ **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
  **6.** Add the script to your server start config: `cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
