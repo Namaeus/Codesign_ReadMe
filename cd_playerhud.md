@@ -57,7 +57,9 @@ end)
 
 ### Default Key-binds
 > Tab - Toggle the watch ui.
+
 > K - Toggle move mode.
+
 > Left/Right Arrows - Cycle through the screens.
 
 ### Is the script not working as expected?
