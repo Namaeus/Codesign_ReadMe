@@ -327,7 +327,8 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 	else
 		print('ped is nil')
 	end
-end)
+	end)
+	
 *This “other” section is where we add compatibility for other skin scripts at the request of
  our customers.*
 > If your Config.SkinScript is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
