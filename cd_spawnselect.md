@@ -23,7 +23,7 @@
 
 
 ## Where do i place this trigger event?
-If you are using a multi-character script, we advise you to place the event inside that script, in a place where it will be triggered after you have chosen your character. But if you do not use a multi-character script, we advise you to place it inside your identity script, specifically at a place where your identity script checks if the player is a new or existing player. Only enable it for existing players as the ui will conflict with the ui of your identity script.
+If you are using a multi-character script, we advise you to place the event inside that script, in a place where it will be triggered after you have chosen your character. But if you do not use a multi-character script, we advise you to place it inside your identity script, specifically at a place where your identity script checks if the player is a new or existing player. Only enable it for existing players as the spawnselect ui will conflict with the identity ui for new players.
 
 ## Is the script not working as expected?
 - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
