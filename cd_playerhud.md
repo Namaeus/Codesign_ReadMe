@@ -45,7 +45,7 @@ end)
 
 **Below is an seperate additional event that may come in handy for you.**
 
-*You can use the `GetMoney()` function in the client customise_me.lua to get and set the money values on the watch UI, but if you wish to set them values via a triger event, this is the event you can use.*
+*You can use the `GetMoney()` function in the client customise_me.lua to get and set the money values on the watch UI, but if you wish to set them values via a trigger event, this is the event you can use.*
 > TriggerClientEvent('cd_playerhud:SetCustomMoneyValues', source, Action_Type, Money_Type, Amount)
 
 |Action_Type| Money_Type |
