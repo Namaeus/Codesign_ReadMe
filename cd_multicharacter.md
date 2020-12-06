@@ -55,7 +55,7 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 
 **esx_skin**
 
-There are 2 different versions for esx_skin, `loadskin2` and `loadskin3`. Both edited for different versions of esx_skin and skinchanger. You should try use `skinchanger:loadSkin2` first.
+*There are 2 different versions for esx_skin, `loadskin2` and `loadskin3`. Both edited for different versions of esx_skin and skinchanger. You should try use `skinchanger:loadSkin2` first.*
 
 > If your Config.SkinScript is set to `’esx’` then copy and paste this block of code below into the client side of your `skinchanger` resource.
 
