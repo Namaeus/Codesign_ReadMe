@@ -13,8 +13,6 @@
 
 *This script completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs also). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.*
 
-### Hunger and Thirst
-
 > TriggerClientEvent('cd_playerhud:status:add', source, Status_Type, Amount)
 > TriggerClientEvent('cd_playerhud:status:remove', source, Status_Type, Amount)
 > TriggerClientEvent('cd_playerhud:status:set', source, Status_Type, Amount)
@@ -41,7 +39,7 @@ TriggerClientEvent('esx_basicneeds:onEat', source)
 xPlayer.showNotification(_U('used_bread'))
 end)
 ```
-### Setting Money Values
+
 *You can use the `GetMoney()` function in the client customise_me.lua to get and set the money values on the watch UI, but if you wish to set them values via a triger event, this is the event you can use.*
 > TriggerClientEvent('cd_playerhud:SetCustomMoneyValues', source, Action_Type, Money_Type, Amount)
 
