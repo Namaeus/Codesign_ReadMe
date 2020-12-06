@@ -338,6 +338,7 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 ## Are you using the advanced multi-character method?
 If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what you are doing, replace these events in their respective files. This method is more complicated, and more work to set up, but is more optimised than the standard esx_kashacters method as it does not change every identifier in every defined table in the database every time a player connects.
 
+- This is completely optional and we do not reccomend using this option unless you have advanced knowledge of lua.
 - **WARNING** if you are not 100% sure what you are doing here, please contact a member of the Codesign Team before implementing these changes.
 - When using this method, you will need to replace the native method of getting the steam id `GetPlayerIdentifiers(source[1]`, with `xPlayer.identifier` for all of your server sided scripts.
 
