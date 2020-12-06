@@ -1,4 +1,4 @@
-## INSTALLATION GUIDE
+# INSTALLATION GUIDE
 **1.** Unzip the `cd_playerhud.zip` folder.
 
 **2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_playerhud` folder.
@@ -9,7 +9,7 @@
  
  **5.** Add the script to your server start config: `start cd_playerhud`. The name of the folder must not be changed or the script will not function correctly.
 
-### How to install
+## How to install
 
 *This script completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.*
 
@@ -55,14 +55,14 @@ end)
 |’set||
 
 
-### Default Key-binds
+## Default Key-binds
 > Tab - Toggle the watch ui.
 
 > K - Toggle move mode.
 
 > Left/Right Arrows - Cycle through the screens.
 
-### Is the script not working as expected?
+## Is the script not working as expected?
  - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - Make sure the name of the folder is `cd_playerhud`.
  - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
