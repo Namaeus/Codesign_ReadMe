@@ -3,13 +3,11 @@
 
 **2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_props` folder.
 
-**3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_props_SQLFILE`.
-
- **4.** Before starting the script, please read the `config.lua` (located inside the main cd_props folder) and  configure the script to suit your servers needs.
+ **3.** Before starting the script, please read the `config.lua` (located inside the main cd_props folder) and  configure the script to suit your servers needs.
  
- **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+ **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **6.** Add the script to your server start config: `start cd_props`. The name of the folder must not be changed or the script will not function correctly.
+ **5.** Add the script to your server start config: `start cd_props`. The name of the folder must not be changed or the script will not function correctly.
 
 ### Default Key-binds
 *By default, you will be able to open the main props UI by using a keybind or a command, the command is `/prop` by default and the keybinds are below.*
