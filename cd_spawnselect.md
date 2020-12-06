@@ -22,5 +22,5 @@
 | TriggerEvent('cd_spawnselect:OpenUI') | TriggerEvent('cd_spawnselect:OpenUI', coords) |
 
 
-### Where do i put this trigger event?
+### Where do i place this trigger event?
 If you are using a multi-character script, we advise you to place the event inside that script, in a place where it will be triggered after you have chosen your character. But if you do not use a multi-character script, we advise you to place it inside your identity script, specifically at a place where your identity script checks if the player is a new or existing player.
