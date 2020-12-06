@@ -242,96 +242,96 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 > 
     RegisterNetEvent('otherclothing:MultiCharSkin')
     AddEventHandler('otherclothing:MultiCharSkin', function(ped, skin)
-         -----SKIN-------
-        if ped then
-    		if skin then
-    			if skin['skin'] ~= nil then
-    				for i = 1, #drawable_names do
-    					if skin['skin'].drawables[0] == nil then
-    						if drawable_names[i] == "undershirts" and skin['skin'].drawables[tostring(i-1)][2] == -1 then
-    							SetPedComponentVariation(ped, i-1, 15, 0, 2)
-    						else
-    							SetPedComponentVariation(ped, i-1, skin['skin'].drawables[tostring(i-1)][2], skin['skin'].drawtextures[i][2], 2)
-    						end
-    					else
-    						if drawable_names[i] == "undershirts" and skin['skin'].drawables[i-1][2] == -1 then
-    							SetPedComponentVariation(ped, i-1, 15, 0, 2)
-    						else
-    							SetPedComponentVariation(ped, i-1, skin['skin'].drawables[i-1][2], skin['skin'].drawtextures[i][2], 2)
-    						end
-    					end
-    				end
-				for i = 1, #prop_names do
-					local propZ = (skin['skin'].drawables[0] == nil and skin['skin'].props[tostring(i-1)][2] or skin['skin'].props[i-1][2])
-					ClearPedProp(ped, i-1)
-					SetPedPropIndex(ped,i-1,propZ,skin['skin'].proptextures[i][2], true)
-				end
+	         -----SKIN-------
+	        if ped then
+	    		if skin then
+	    			if skin['skin'] ~= nil then
+	    				for i = 1, #drawable_names do
+	    					if skin['skin'].drawables[0] == nil then
+	    						if drawable_names[i] == "undershirts" and skin['skin'].drawables[tostring(i-1)][2] == -1 then
+	    							SetPedComponentVariation(ped, i-1, 15, 0, 2)
+	    						else
+	    							SetPedComponentVariation(ped, i-1, skin['skin'].drawables[tostring(i-1)][2], skin['skin'].drawtextures[i][2], 2)
+	    						end
+	    					else
+	    						if drawable_names[i] == "undershirts" and skin['skin'].drawables[i-1][2] == -1 then
+	    							SetPedComponentVariation(ped, i-1, 15, 0, 2)
+	    						else
+	    							SetPedComponentVariation(ped, i-1, skin['skin'].drawables[i-1][2], skin['skin'].drawtextures[i][2], 2)
+	    						end
+	    					end
+	    				end
+					for i = 1, #prop_names do
+						local propZ = (skin['skin'].drawables[0] == nil and skin['skin'].props[tostring(i-1)][2] or skin['skin'].props[i-1][2])
+						ClearPedProp(ped, i-1)
+						SetPedPropIndex(ped,i-1,propZ,skin['skin'].proptextures[i][2], true)
+					end
 
-				Citizen.Wait(500)
-				if skin['skin'].model == 1885233650 or skin['skin'].model == -1667301416 then
-					-----FACE-------
-					if skin['face'] ~= nil then
-						SetPedHairColor(ped, tonumber(skin['face'].hairColor[1]), tonumber(skin['face'].hairColor[2]))
-						SetPedHeadBlendData(ped,
-							tonumber(skin['face'].headBlend['shapeFirst']),
-							tonumber(skin['face'].headBlend['shapeSecond']),
-							tonumber(skin['face'].headBlend['shapeThird']),
-							tonumber(skin['face'].headBlend['skinFirst']),
-							tonumber(skin['face'].headBlend['skinSecond']),
-							tonumber(skin['face'].headBlend['skinThird']),
-							tonumber(skin['face'].headBlend['shapeMix']),
-							tonumber(skin['face'].headBlend['skinMix']),
-							tonumber(skin['face'].headBlend['thirdMix']),
-						false)
+					Citizen.Wait(500)
+					if skin['skin'].model == 1885233650 or skin['skin'].model == -1667301416 then
+						-----FACE-------
+						if skin['face'] ~= nil then
+							SetPedHairColor(ped, tonumber(skin['face'].hairColor[1]), tonumber(skin['face'].hairColor[2]))
+							SetPedHeadBlendData(ped,
+								tonumber(skin['face'].headBlend['shapeFirst']),
+								tonumber(skin['face'].headBlend['shapeSecond']),
+								tonumber(skin['face'].headBlend['shapeThird']),
+								tonumber(skin['face'].headBlend['skinFirst']),
+								tonumber(skin['face'].headBlend['skinSecond']),
+								tonumber(skin['face'].headBlend['skinThird']),
+								tonumber(skin['face'].headBlend['shapeMix']),
+								tonumber(skin['face'].headBlend['skinMix']),
+								tonumber(skin['face'].headBlend['thirdMix']),
+							false)
 
-						for i = 1, #face_features do
-							SetPedFaceFeature(player, i-1, skin['face'].headStructure[i])
-						end
-						if json.encode(skin['face'].headOverlay) ~= "[]" then
-							for i = 1, #head_overlays do
-								if skin['face'].headOverlay[i].name == "eyecolor" then
-									SetPedEyeColor(player, tonumber(skin['face'].headOverlay[i].val))
-								else
-									SetPedHeadOverlay(player,  i-1, tonumber(skin['face'].headOverlay[i].overlayValue),  tonumber(skin['face'].headOverlay[i].overlayOpacity))
-								end
+							for i = 1, #face_features do
+								SetPedFaceFeature(player, i-1, skin['face'].headStructure[i])
 							end
-					
-							SetPedHeadOverlayColor(ped, 0, 0, tonumber(skin['face'].headOverlay[1].firstColour), tonumber(skin['face'].headOverlay[1].secondColour))
-							SetPedHeadOverlayColor(ped, 1, 1, tonumber(skin['face'].headOverlay[2].firstColour), tonumber(skin['face'].headOverlay[2].secondColour))
-							SetPedHeadOverlayColor(ped, 2, 1, tonumber(skin['face'].headOverlay[3].firstColour), tonumber(skin['face'].headOverlay[3].secondColour))
-							SetPedHeadOverlayColor(ped, 3, 0, tonumber(skin['face'].headOverlay[4].firstColour), tonumber(skin['face'].headOverlay[4].secondColour))
-							SetPedHeadOverlayColor(ped, 4, 2, tonumber(skin['face'].headOverlay[5].firstColour), tonumber(skin['face'].headOverlay[5].secondColour))
-							SetPedHeadOverlayColor(ped, 5, 2, tonumber(skin['face'].headOverlay[6].firstColour), tonumber(skin['face'].headOverlay[6].secondColour))
-							SetPedHeadOverlayColor(ped, 6, 0, tonumber(skin['face'].headOverlay[7].firstColour), tonumber(skin['face'].headOverlay[7].secondColour))
-							SetPedHeadOverlayColor(ped, 7, 0, tonumber(skin['face'].headOverlay[8].firstColour), tonumber(skin['face'].headOverlay[8].secondColour))
-							SetPedHeadOverlayColor(ped, 8, 2, tonumber(skin['face'].headOverlay[9].firstColour), tonumber(skin['face'].headOverlay[9].secondColour))
-							SetPedHeadOverlayColor(ped, 9, 0, tonumber(skin['face'].headOverlay[10].firstColour), tonumber(skin['face'].headOverlay[10].secondColour))
-							SetPedHeadOverlayColor(ped, 10, 1, tonumber(skin['face'].headOverlay[11].firstColour), tonumber(skin['face'].headOverlay[11].secondColour))
-							SetPedHeadOverlayColor(ped, 11, 0, tonumber(skin['face'].headOverlay[12].firstColour), tonumber(skin['face'].headOverlay[12].secondColour))
+							if json.encode(skin['face'].headOverlay) ~= "[]" then
+								for i = 1, #head_overlays do
+									if skin['face'].headOverlay[i].name == "eyecolor" then
+										SetPedEyeColor(player, tonumber(skin['face'].headOverlay[i].val))
+									else
+										SetPedHeadOverlay(player,  i-1, tonumber(skin['face'].headOverlay[i].overlayValue),  tonumber(skin['face'].headOverlay[i].overlayOpacity))
+									end
+								end
+						
+								SetPedHeadOverlayColor(ped, 0, 0, tonumber(skin['face'].headOverlay[1].firstColour), tonumber(skin['face'].headOverlay[1].secondColour))
+								SetPedHeadOverlayColor(ped, 1, 1, tonumber(skin['face'].headOverlay[2].firstColour), tonumber(skin['face'].headOverlay[2].secondColour))
+								SetPedHeadOverlayColor(ped, 2, 1, tonumber(skin['face'].headOverlay[3].firstColour), tonumber(skin['face'].headOverlay[3].secondColour))
+								SetPedHeadOverlayColor(ped, 3, 0, tonumber(skin['face'].headOverlay[4].firstColour), tonumber(skin['face'].headOverlay[4].secondColour))
+								SetPedHeadOverlayColor(ped, 4, 2, tonumber(skin['face'].headOverlay[5].firstColour), tonumber(skin['face'].headOverlay[5].secondColour))
+								SetPedHeadOverlayColor(ped, 5, 2, tonumber(skin['face'].headOverlay[6].firstColour), tonumber(skin['face'].headOverlay[6].secondColour))
+								SetPedHeadOverlayColor(ped, 6, 0, tonumber(skin['face'].headOverlay[7].firstColour), tonumber(skin['face'].headOverlay[7].secondColour))
+								SetPedHeadOverlayColor(ped, 7, 0, tonumber(skin['face'].headOverlay[8].firstColour), tonumber(skin['face'].headOverlay[8].secondColour))
+								SetPedHeadOverlayColor(ped, 8, 2, tonumber(skin['face'].headOverlay[9].firstColour), tonumber(skin['face'].headOverlay[9].secondColour))
+								SetPedHeadOverlayColor(ped, 9, 0, tonumber(skin['face'].headOverlay[10].firstColour), tonumber(skin['face'].headOverlay[10].secondColour))
+								SetPedHeadOverlayColor(ped, 10, 1, tonumber(skin['face'].headOverlay[11].firstColour), tonumber(skin['face'].headOverlay[11].secondColour))
+								SetPedHeadOverlayColor(ped, 11, 0, tonumber(skin['face'].headOverlay[12].firstColour), tonumber(skin['face'].headOverlay[12].secondColour))
+							end
+						else
+							print('skin[face] is nil')
 						end
-					else
-						print('skin[face] is nil')
-					end
 
-					-----TATTOOS-------
-					if skin['tattoo'] ~= nil then
-						ClearPedDecorations(ped)
-						for i = 1, #skin['tattoo'] do
-							ApplyPedOverlay(ped, skin['tattoo'][i][1], skin['tattoo'][i][2])
+						-----TATTOOS-------
+						if skin['tattoo'] ~= nil then
+							ClearPedDecorations(ped)
+							for i = 1, #skin['tattoo'] do
+								ApplyPedOverlay(ped, skin['tattoo'][i][1], skin['tattoo'][i][2])
+							end
+						else
+							print('skin[tattoo] is nil')
 						end
-					else
-						print('skin[tattoo] is nil')
 					end
+				else
+					print('skin[skin] is nil')
 				end
 			else
-				print('skin[skin] is nil')
+				print('skin is nil')
 			end
 		else
-			print('skin is nil')
+			print('ped is nil')
 		end
-	else
-		print('ped is nil')
-	end
 	end)
 
 ## Default Key-binds
