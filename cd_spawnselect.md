@@ -24,3 +24,8 @@
 
 ### Where do i place this trigger event?
 If you are using a multi-character script, we advise you to place the event inside that script, in a place where it will be triggered after you have chosen your character. But if you do not use a multi-character script, we advise you to place it inside your identity script, specifically at a place where your identity script checks if the player is a new or existing player.
+
+## Is the script not working as expected?
+- Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
+- Make sure the name of the folder is `cd_terminalhacker`.
+- If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
