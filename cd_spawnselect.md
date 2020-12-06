@@ -27,5 +27,5 @@ If you are using a multi-character script, we advise you to place the event insi
 
 ## Is the script not working as expected?
 - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
-- Make sure the name of the folder is `cd_terminalhacker`.
+- Make sure the name of the folder is `cd_spawnselect`.
 - If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
