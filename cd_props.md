@@ -1,4 +1,4 @@
-## INSTALLATION GUIDE
+# INSTALLATION GUIDE
 **1.** Unzip the `cd_props.zip` folder.
 
 **2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_props` folder.
@@ -9,7 +9,7 @@
  
  **5.** Add the script to your server start config: `start cd_props`. The name of the folder must not be changed or the script will not function correctly.
 
-### Default Key-binds
+## Default Key-binds
 *By default, you will be able to open the main props UI by using a keybind or a command, the command is `/prop` by default and the keybinds are below.*
 > Numpad Minus - Open the main props UI menu.
 
@@ -17,7 +17,7 @@
 
 > Backspace - Delete props that are in your hand.
 
-### Is the script not working as expected?
+## Is the script not working as expected?
  - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - Make sure the name of the folder is `cd_props`.
  - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
