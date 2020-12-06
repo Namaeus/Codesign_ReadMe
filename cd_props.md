@@ -12,6 +12,7 @@
  **6.** Add the script to your server start config: `start cd_props`. The name of the folder must not be changed or the script will not function correctly.
 
 ### Default Key-binds
+*By default, you will be able to open the main props UI by using a keybind or a command, the command is `prop` by default*
 > Numpad Minus - Open the main props UI menu.
 
 > L - Pickup/drop props on the floor.
