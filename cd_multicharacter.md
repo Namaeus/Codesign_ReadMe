@@ -53,11 +53,13 @@ First we will need to do a small edit to stop es_extended regestering our charac
 Ok now we need to copy and paste some code into your skin resource. We have multiple options for you, depending on which skin resource you use.
 
 **esx_skin**
+
 *There are 2 different versions for esx_skin, `loadskin2` and `loadskin3`. Both edited for different versions of esx_skin and skinchanger. You should try `use loadskin2 first`, but if you have errors in the skinchanger resource related to `blemishes`,  use the loadskin3 block of code, and replace the event name in client/customise_me/line 56 from “skinchanger:loadSkin2” to “skinchanger:loadSkin3”.*
 
 > If your Config.SkinScript is set to `’esx’` then copy and paste this block of code below into the client side of your `skinchanger` resource.
 
 **Other**
+
 *This “other” section is where we add compatibility for other skin scripts at the request of our customers.*
 > If your Config.SkinScript is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
 
