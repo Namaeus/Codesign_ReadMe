@@ -1,4 +1,4 @@
-## SET UP INSTRUCTIONS
+## INSTALLATION GUIDE
 **1.** Unzip the `cd_spawnselect.zip` folder.
 
 **2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_spawnselect` folder.
