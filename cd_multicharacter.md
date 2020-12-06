@@ -1,5 +1,6 @@
 
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_multicharacter.zip` folder.
 
@@ -333,6 +334,123 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 			print('ped is nil')
 		end
 	end)
+
+## Are you using the advanced multi-character method?
+If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what you are doing, replace these events in their respective files. This method is more complicated, and more work to set up, but is more optimised than the standard esx_kashacters method as it does not change every identifier in every defined table in the database every time a player connects.
+
+- **WARNING** if you are not 100% sure what you are doing here, please contact a member of the Codesign Team before implementing these changes.
+- When using this method, you will need to replace the native method of getting the steam id `GetPlayerIdentifiers(source[1]`, with `xPlayer.identifier` for all of your server sided scripts.
+
+**ESX version 1.1 - essentialmode/server/main.lua/line 41 - replace the existing block of code with this.**
+	
+	RegisterServerEvent('es:firstJoinProper')
+	AddEventHandler('es:firstJoinProper', function(charID)
+		local Source = source
+		Citizen.CreateThread(function()
+			local id
+			for k,v in ipairs(GetPlayerIdentifiers(Source)) do
+				if string.match(v, 'steam:') then
+					id = charID..''..v:sub(7)
+					break
+				end
+			end
+
+			if not id then
+				DropPlayer(Source, "SteamID not found, please try reconnecting with Steam open.")
+			else
+				registerUser(id, Source)
+				justJoined[Source] = true
+				if(settings.defaultSettings.pvpEnabled)then
+					TriggerClientEvent("es:enablePvp", Source)
+				end
+			end
+
+			return
+		end)
+	end)
+
+**ESX version 1.2 - es_extended/server/main.lua/line 1 - replace the existing block of code with this.**
+
+	RegisterNetEvent('esx:playerJoined')
+	AddEventHandler('esx:playerJoined', function(charID)
+		onPlayerJoined(source, charID)
+	end)
+
+	function onPlayerJoined(playerId, charID)
+		local identifier
+
+		for k,v in ipairs(GetPlayerIdentifiers(playerId)) do
+			if string.match(v, 'license:') then
+				identifier = charID..''..v:sub(9)
+				break
+			end
+		end
+
+		if identifier then
+			MySQL.Async.fetchScalar('SELECT 1 FROM users WHERE identifier = @identifier', {
+				['@identifier'] = identifier
+			}, function(result)
+				if result then
+					loadESXPlayer(identifier, playerId)
+				else
+					MySQL.Async.execute('INSERT INTO users (identifier) VALUES (@identifier)', {
+						['@identifier'] = identifier
+					}, function(rowsChanged)
+						loadESXPlayer(identifier, playerId)
+					end)
+				end
+			end)
+		else
+			DropPlayer(playerId, 'Your Rockstar license could not be found')
+		end
+	end
+
+**ESX version 1.final - es_extended/server/main.lua/line 6 - replace the existing block of code with this.**
+	
+	RegisterNetEvent('esx:onPlayerJoined')
+	AddEventHandler('esx:onPlayerJoined', function(charID)
+		onPlayerJoined(source, charID)
+	end)
+
+	function onPlayerJoined(playerId, charID)
+		local identifier
+
+		for k,v in ipairs(GetPlayerIdentifiers(playerId)) do
+			if string.match(v, 'license:') then
+				identifier = charID..''..v:sub(9)
+				break
+			end
+		end
+
+		if identifier then
+			if ESX.GetPlayerFromIdentifier(identifier) then
+				DropPlayer(playerId, ('there was an error loading your character!\nError code: identifier-active-ingame\n\nThis error is caused by a player on this server who has the same identifier as you have. Make sure you are not playing on the same Rockstar account.\n\nYour Rockstar identifier: %s'):format(identifier))
+			else
+				MySQL.Async.fetchScalar('SELECT 1 FROM users WHERE identifier = @identifier', {
+					['@identifier'] = identifier
+				}, function(result)
+					if result then
+						loadESXPlayer(identifier, playerId)
+					else
+						local accounts = {}
+
+						for account,money in pairs(Config.StartingAccountMoney) do
+							accounts[account] = money
+						end
+
+						MySQL.Async.execute('INSERT INTO users (accounts, identifier) VALUES (@accounts, @identifier)', {
+							['@accounts'] = json.encode(accounts),
+							['@identifier'] = identifier
+						}, function(rowsChanged)
+							loadESXPlayer(identifier, playerId)
+						end)
+					end
+				end)
+			end
+		else
+			DropPlayer(playerId, 'there was an error loading your character!\nError code: identifier-missing-ingame\n\nThe cause of this error is not known, your identifier could not be found. Please come back later or report this problem to the server administration team.')
+		end
+	end
 
 ## Default Key-binds
 
