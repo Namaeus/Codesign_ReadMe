@@ -335,7 +335,9 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 	end)
 
 ## Default Key-binds
+
 > Left/Right Arrows - Cycle through the screens.
+
 > Enter/Left Mouse - Select character.
 
 ## Is the script not working as expected?
