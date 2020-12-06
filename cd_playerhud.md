@@ -11,7 +11,7 @@
 
 ### How to install
 
-*This script completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs also). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.*
+*This script completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.*
 
 > TriggerClientEvent('cd_playerhud:status:add', source, Status_Type, Amount)
 > TriggerClientEvent('cd_playerhud:status:remove', source, Status_Type, Amount)
