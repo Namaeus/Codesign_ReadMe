@@ -22,3 +22,4 @@
 ### Is the script not working as expected?
  - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
+ - If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
