@@ -7,7 +7,7 @@
 
  **4.** Before starting the script, please read the `config.lua` (located inside the main cd_terminalhacker folder), the `config.js` (located inside the html/js folder) and the `customise_me`  (located inside the server and client folders) and configure the script to suit your servers needs.
  
- **5.** **WARNING** do not delete any files, do not change file names and do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+ **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
  **6.** Add the script to your server start config: `start cd_spawnselect`. The name of the folder must not be changed or the script will not function correctly.
 
