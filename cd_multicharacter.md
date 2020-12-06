@@ -1,4 +1,5 @@
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_multicharacter.zip` folder.
 
@@ -235,6 +236,10 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 
 **Other**
 
+*This “other” section is where we add compatibility for other skin scripts at the request of
+ our customers.*
+> If your Config.SkinScript is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
+> 
     RegisterNetEvent('otherclothing:MultiCharSkin')
     AddEventHandler('otherclothing:MultiCharSkin', function(ped, skin)
          -----SKIN-------
@@ -328,12 +333,6 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 		print('ped is nil')
 	end
 	end)
-	
-*This “other” section is where we add compatibility for other skin scripts at the request of
- our customers.*
-> If your Config.SkinScript is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
-
-
 
 ## Default Key-binds
 > Left/Right Arrows - Cycle through the screens.
