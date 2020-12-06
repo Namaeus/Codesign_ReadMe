@@ -34,6 +34,6 @@ Along your search path you are supposed to download additional files from the fi
 Score and time taken determine the leaderboard placement, and the server owner can set their own actions based on time and score.
 
 ## Is the script not working as expected?
-- Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying Authorised Successfully and check for a client sided print saying Successful.
+- Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
 - Make sure the name of the script is `cd_terminalhacker`.
 - If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
