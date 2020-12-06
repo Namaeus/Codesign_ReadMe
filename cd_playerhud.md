@@ -21,7 +21,7 @@
 
 - *The `type` must be sent as a string and the `amount` must be sent as a number.*
 - *Example: 0 is empty food and 100 is full food.*
-- *You can also trigger these events from the server to client, just like you would with any other events.*
+- *You can also trigger these events from the client to client, just like you would with any other events.*
 
 |Status_Type| Amount|
 |--|--|
