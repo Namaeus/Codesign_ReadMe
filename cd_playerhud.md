@@ -26,6 +26,7 @@
 | ‘hunger’ |0-100|
 |’thirst’|0-100|
 |’stress’|0-100|
+
 **Below is an example, replace the esx_status event with the cd_playerhud event.**
 ```
 ESX.RegisterUsableItem('bread', function(source)
