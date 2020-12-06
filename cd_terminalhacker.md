@@ -5,7 +5,7 @@
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_terminalhacker_SQLFILE`.
 
- **4.** Before starting the script, please read the `config.lua` (this located inside the main cd_terminalhacker folder) and the `config.js` (this located inside html/js folder) and configure the script to suit your servers needs.
+ **4.** Before starting the script, please read the `config.lua` (this located inside the main cd_terminalhacker folder) and the `config.js` (this is located inside html/js folder) and configure the script to suit your servers needs.
  
  **5.** **WARNING** do not delete any files, do not change file names and do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
