@@ -11,7 +11,9 @@
  
  **6.** Add the script to your server start config: `cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
-### Example
+### How to use?
+This works like any other hacking mini game for FiveM, just more interactive. You would place the export (as seen below) in a robbery script for example, and if the player completes the hack, you can either reward the player or allow them to progress to the next stage.
+
 *The code below can only be placed inside a client.lua file, not a server.lua file.*
 ```
 local example = exports['cd_terminalhacker']:StartTerminalHacking()
@@ -27,6 +29,6 @@ end
 **About the game**
 
 The point of the hacking game is to find the proper .exe file somewhere in a remote pc's directory.
-Some .exe files are corrupted and will set you back. (You need to figure which are which)
+Some .exe files are corrupted and will set you back. (You need to figure which are which).
 Along your search path you are supposed to download additional files from the file system and gain score.
 Score and time taken determine the leaderboard placement, and the server owner can set their own actions based on time and score.
