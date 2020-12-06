@@ -13,10 +13,11 @@
 
 ### Default Key-binds
 > Numpad Minus - Open the main props UI menu.
+
 > L - Pickup/drop props on the floor.
+
 > Backspace - Delete props that are in your hand.
 
 ### Is the script not working as expected?
  - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
-
