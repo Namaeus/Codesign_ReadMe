@@ -54,7 +54,7 @@ If you are using an older version of es_extended, the modifications below are re
 
 **Do you want to use the property garages?**
 
-> If you use a paid property resource, then it’s really the developer of said resource who will be best suited to help you with the property garages, as the Codesign Team dosen't have access to their resources and we can’t have access to them without the developers permission, considering we have not purchased them. But, we have made it extremely simply for this to be implemented into your property script.
+> If you use a paid property resource, then it’s really the developer of said resource who will be best suited to help you with the property garages, as the Codesign Team dosen't have access to their resources and we can’t have access to them without the developers permission, considering we haven't purchased them. But, we have made it extremely simply for this to be implemented into your property script.
 
 |Spawning a vehicle| Storing a vehicle |
 |--|--|
