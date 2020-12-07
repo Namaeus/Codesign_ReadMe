@@ -59,7 +59,7 @@ If you are using an older version of es_extended, the modifications below are re
 |Spawning a vehicle| Storing a vehicle |
 |--|--|
 | TriggerEvent('cd_garage:PropertyGarage', Action) | TriggerEvent('cd_garage:StoreVehicle_Main', 1, false) |
-|*You must send either `‘quick’` or `’inside’` as the first argument. (Replacing `Action` above.)*|The first and second argument must alays stay the same. (As seen above).|
+|*You must send either `‘quick’` or `’inside’` as the first argument. (Replacing `Action` above.)*|*The first and second argument must alays stay the same. (As seen above).*|
 
 ## Exports
 These exports are completely optional, and there for you if you wish to use them.
