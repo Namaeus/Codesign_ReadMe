@@ -26,13 +26,13 @@ There are 4 resources that this garage depends upon. These are provided in your 
 ## Required modifications
 If you are using an older version of es_extended, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
 
-**es_extended/client/functions and search for a function called `ESX.Game.GetVehicleProperties`.**
+**es_extended/client/functions - search for a function called `ESX.Game.GetVehicleProperties`.**
 
     bodyHealth = ESX.Math.Round(GetVehicleBodyHealth(vehicle), 1),
     engineHealth = ESX.Math.Round(GetVehicleEngineHealth(vehicle), 1),
     fuelLevel = ESX.Math.Round(GetVehicleFuelLevel(vehicle), 1),
 
-**es_extended/client/functions and search for a function called `ESX.Game.SetVehicleProperties`.**  
+**es_extended/client/functions - search for a function called `ESX.Game.SetVehicleProperties`.**  
 
     if props.bodyHealth then SetVehicleBodyHealth(vehicle, props.bodyHealth + 0.0) end
     if props.engineHealth then SetVehicleEngineHealth(vehicle, props.engineHealth + 0.0) end
