@@ -44,6 +44,7 @@ If you are using an older version of es_extended, the modifications below are re
 ## Optional modifications
 
 **Are you using boat and air garages?**
+
 > If so, when a player purchases a boat/air vehicle, you will need to update the `garage_type` for this vehicle in the database. If you do not use boat/air vehicles, you can ignore this as the default garage_type value in the database is car.
 
 - There garage_type can only be set to 3 values: `’car’` `’boat’` `’air’` and these values must be sent as a string.
