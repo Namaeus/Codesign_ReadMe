@@ -66,15 +66,19 @@ These exports are completely optional, and there for you if you wish to use them
 
 >Server Side Exports
 
-`exports['cd_garage']:GetGarageLimit(source)` - Returns the players garage limit amount from the users table in the database. You must send the players server id.
+`exports['cd_garage']:GetGarageLimit(source)`
+Returns the players garage limit amount from the users table in the database. You must send the players server id.
 
-`exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns. You must send the players server id, but the garage_type is optional. *(If the garage_type is nil, the players car count will be returned.  There garage_type can only be set to 3 values:  ( ‘car’ / ‘boat’ / ‘air’ ) and these values must be sent as a string).*
+`exports['cd_garage']:GetGarageCount(source, garage_type)`
+Returns the amount of vehicles the player owns. You must send the players server id, but the garage_type is optional. *(If the garage_type is nil, the players car count will be returned.  There garage_type can only be set to 3 values:  ( ‘car’ / ‘boat’ / ‘air’ ) and these values must be sent as a string).*
 
 > Client Side Exports
 
-`exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( ‘car’ / ‘boat’ / ‘air’ ). You must send the vehicle id.
+`exports['cd_garage']:GetGarageType(vehicle)`
+Returns the type of vehicle ( ‘car’ / ‘boat’ / ‘air’ ). You must send the vehicle id.
 
-`exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using `tostring(GetVehicleNumberPlateText(vehicle))`.
+`exports['cd_garage']:GetAdvStats(plate)`
+Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using `tostring(GetVehicleNumberPlateText(vehicle))`.
 
 ## Chat commands
 
