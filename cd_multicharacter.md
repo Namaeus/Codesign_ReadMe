@@ -19,7 +19,7 @@
 ## Step 1
 First we will need to do a small edit to stop es_extended regestering our character instantly instantly.
 
-**ESX version 1.1 - essentialmode/client/main.lua/line 5 - hashout/remove this code.**
+**ESX version 1.1** - essentialmode/client/main.lua/line 5 - hashout/remove this code.
 
     -- 	Citizen.CreateThread(function()
     -- 		while true do
@@ -40,7 +40,7 @@ First we will need to do a small edit to stop es_extended regestering our charac
     -- 		TriggerServerEvent('esx:playerJoined')
     -- 	end
 
-**ESX version 1.final - es_extended/client/main.lua/line 3 - hashout/remove this code.**
+**ESX version 1.final** - es_extended/client/main.lua/line 3 - hashout/remove this code.
 
     --	Citizen.CreateThread(function()
     --		while true do
