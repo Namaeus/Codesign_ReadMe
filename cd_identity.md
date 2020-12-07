@@ -15,7 +15,7 @@
  **6.** Add the script to your server start config: `cd_identity`. The name of the folder must not be changed or the script will not function correctly.
 
 ## How to use?
-This can be triggered from the server or client. In the `server_customise_me.lua` file you will have access to customise the sql query, so you can decide what data gets saved to the database.
+This can be triggered from the server or client. In the `server_customise_me.lua` file you will have access to customise the sql query, so you can decide what data gets saved to the database. But make sure you only trigger this event after your character has already been loaded in by esx.
 |From Server| From Client |
 |--|--|
 | TriggerclientEvent(‘cd_identity:OpenIdentityUI’, source) | Triggerevent(’cd_identity:OpenIdentityUI’) |
