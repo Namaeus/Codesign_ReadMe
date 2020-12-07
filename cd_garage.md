@@ -82,7 +82,7 @@ Returns the type of vehicle ( ‘car’ / ‘boat’ / ‘air’ ). You must sen
 
 `exports['cd_garage']:GetAdvStats(plate)`
 
-Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using `tostring(GetVehicleNumberPlateText(vehicle))`.
+Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using tostring(GetVehicleNumberPlateText(vehicle)).
 
 ## Chat commands
 
