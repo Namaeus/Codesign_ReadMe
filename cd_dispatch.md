@@ -93,7 +93,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 > - **colour** = Colour of the blip - can be found at then bottom of this website page https://docs.fivem.net/docs/game-references/blips/.
 > - **flashes** - If set to true the blip will flash, used for more important calls.
 > - **time** - The amount of time until the blip fades (default is 5 mins.)
-> - **sound** - The sound when receiving a notification (1 = 1 sound, 2 = 2 sounds, 3 = 3 sounds, 4 = panic button alert sound). *But these can be configured in the client/customise_me.*
+> - **sound** - The sound when receiving a notification (1 = 1 sound, 2 = 2 sounds, 3 = 3 sounds, 4 = panic button alert sound). *But these can be configured in the client/customise_me/line 38.*
 
 
 
