@@ -19,7 +19,7 @@
 
 **Are you using a multi-character resource?**
 
-If so, trigger this event from the multicharacter resource after you have fully spawned in - `TriggerEvent('cd_dispatch:GrabInfo')`.
+If so, trigger this event from the multicharacter resource after you have fully spawned in `TriggerEvent('cd_dispatch:GrabInfo')`.
 
 **Do you want to display which radio channels each player (who has access to use the dispatch) is in?**
 
