@@ -25,9 +25,7 @@ If so, trigger this event from the multicharacter resource after you have fully 
 
 If so, you will need to be using some sort of voice radio resource. This event needs to be triggered from your radio resource, specifically when a player (who has access to use the dispatch) joins/changes a radio channel.
 
-*An example of how to implement this into ls-radio is in this photo.*
-
-https://imgur.com/6j7wEYM
+https://imgur.com/6j7wEYM *An photo example of how to implement this into ls-radio.*
 
 `TriggerServerEvent('cd_dispatch:GetRadioChannel', RADIO_CHANNEL_HERE)` *You must send the radio channel as a string or a number.*
 
