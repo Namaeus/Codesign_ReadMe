@@ -1,0 +1,22 @@
+
+# INSTALLATION GUIDE
+**1.** Unzip the `cd_carhud.zip` folder.
+
+**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_carhud` folder.
+
+ **3.** Before starting the script, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_carhud` folder . Now you can configure the script to suit your servers needs.
+ 
+ **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+ 
+ **5** Add the script to your server start config: `cd_carhud`. The name of the folder must not be changed or the script will not function correctly.
+
+
+
+
+
+
+## Is the script not working as expected?
+- Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
+- Make sure the name of the folder is `cd_carhud`.
+- If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
+- If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
