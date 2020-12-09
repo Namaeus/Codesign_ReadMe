@@ -16,16 +16,20 @@
  **6.** Add the script to your server start config: `cd_dispatch`. The name of the folder must not be changed or the script will not function correctly.
 
 ## Optional Modifications
+
 **Are you using a multi-character resource?**
+
 If so, trigger this event from the multicharacter resource after you have fully spawned in - `TriggerEvent('cd_dispatch:GrabInfo')`.
 
 **Do you want to display which radio channels each player (who has access to use the dispatch) is in?**
+
 If so, you will need to be using some sort of voice resource resource. This event needs to be triggered from your radio resource, specifically when a player (who has access to use the dispatch) joins/changes a radio channel.
 *An example of how to implement this into ls-radio is in this photo.*
 https://imgur.com/6j7wEYM
 `TriggerServerEvent('cd_dispatch:GetRadioChannel', RADIO_CHANNEL_HERE)` *You must send the radio channel as a string or a number.*
 
 **Do you use locales instead of job checks?**
+
 This is only needed if your police don't switch jobs to go off duty, but instead have an on/off duty locale system.
 `TriggerEvent('cd_dispatch:OnDutyChecks, BOOLEAN)` *You must send as a Boolean (true or false).*
 
