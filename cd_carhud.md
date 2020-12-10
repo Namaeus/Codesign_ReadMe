@@ -31,7 +31,7 @@ There are already 2 examples of how you would do this, the default is using the 
 
  - **Seat belt** - By default, the thread for the seat belt in `configs/client_customise_me.lua` consumes the majority of the ms. It can be reduced by 0.03 by disabling `Config.DisableExitingVehicle`. The `Config.SeatbeltLoopTimer` can also be increased from 50 to 200 (or even more to reduce more ms) to reduce 0.02. The ms can be reduced by 0.06 in total by disabling the seatbelt completely - `Config.Seatbelt.ENABLE`.
 
- - **Default UI refresh rate** - The refresh rate of the ui can also play a huge factor in this. You can set the default refresh rate value for all players at the bottom of the `configs/ui_config.js`. It is set by default to 100*ms* but you can increase it to 250-500 to further reduce the ms from 0.05 to 0.02 while still not noticing any delay in the UI. You could also change the refresh rate to 1000ms and total ms usage will only be 0.01*ms*, but this time you will notice the delay when the UI values ae being updated.
+ - **Default UI refresh rate** - The refresh rate of the ui can also play a huge factor in this. You can set the default refresh rate value for all players at the bottom of the `configs/ui_config.js`. The default value is 100*ms* but you can increase it to 250-500 to further reduce the ms from 0.05 to 0.02 while still not noticing any delay in the UI. You could also change the refresh rate to 1000ms and total ms usage will only be 0.01*ms*, but this time you will notice the delay when the UI values ae being updated.
 
 
 
