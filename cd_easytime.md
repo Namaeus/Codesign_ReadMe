@@ -1,4 +1,3 @@
-
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_easytime.zip` folder.
 
