@@ -59,7 +59,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 
 
 	RegisterServerEvent('testevent')
-	AddEventHandler(‘testevent’, function(data, customcoords)
+	AddEventHandler('testevent', function(data, customcoords)
 		if customcoords ~= nil then
 			data.coords = customcoords
 		end
