@@ -1,9 +1,7 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_drawtextui.zip` folder.
-
-**2.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_drawtextui` folder. Now you can configure the resource to suit your servers needs.
  
-**3.** Add the resource to your server start config: `ensure cd_drawtextui`. The name of the folder must not be changed or the resource will not function correctly.
+**2.** Add the resource to your server start config: `ensure cd_drawtextui`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## How to use?
 This can be triggered from the server or client. A more advanced example is posted below.
