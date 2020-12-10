@@ -2,7 +2,7 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_identity.zip` folder.
 
-**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_identity` folder.
+**2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_identity` folder.
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_identity_SQLFILE`.
 
