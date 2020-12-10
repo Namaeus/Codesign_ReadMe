@@ -1,4 +1,5 @@
 Please follow our terms of service: https://codesign.pro/policies/terms-of-service
+
 Unauthorized use or distribution ("leaking") of Codesign scripts, whether they are free of charge or paid scripts, is strictly prohibited. 
 If you are found actively engaging in unauthorized use or distribution of our products, following things will happen:
 
