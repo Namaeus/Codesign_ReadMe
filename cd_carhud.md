@@ -24,7 +24,7 @@ There are already 2 examples of how you would do this, the default is using the 
 ## FAQ
 
 **Can i change the default UI settings?**
-> Yes you can, this can be done from `configs/ui_config.js.`
+> Yes you can, this can be done from `configs/ui_config.js.` If you already have saved settings, open the settings UI and click the default settings option.
 
 **Optimisation?**
 > The balance between performance and optimisation is something that you need to decide. You simply can’t have the resource peforming at its peak performance by updating the UI every frame without that having an effect on the optimisation. Although the resource has been created in such a way  where you can allow your players to decide wether they want peak performance from the UI at the cost of loosing 1-2 fps or if they want to keep the fps at the cost of a small delay when updating the UI. But there is a middle ground which we do recommend where you can get the best of both worlds with a little compromise.
