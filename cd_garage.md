@@ -41,7 +41,7 @@ If you are using an older version of es_extended, the modifications below are re
 
 > If so, when a player purchases a boat/air vehicle, you will need to update the `garage_type` for this vehicle in the database. If you do not use boat/air vehicles, you can ignore this as the default garage_type value in the database is car.
 
-- There garage_type can only be set to 3 values: `’car’` `’boat’` `’air’` and these values must be sent as a string.
+- There garage_type can only be set to 3 values: `'car'` `'boat'` `'air'` and these values must be sent as a string.
  - You can enter this value using your own method or you can use the export below.
  - If you choose to use the export below, it can only be used client side and you must send the vehicle id.
 
@@ -50,12 +50,12 @@ If you are using an older version of es_extended, the modifications below are re
 
 **Do you want to use the property garages?**
 
-> If you use a paid property resource, then it’s really the developer of said resource who will be best suited to help you with the property garages, as the Codesign Team dosen't have access to their resources and we can’t have access to them without the developers permission, considering we haven't purchased them. But, we have made it extremely simply for you yourself to implement this into your property resource.
+> If you use a paid property resource, then it's really the developer of said resource who will be best suited to help you with the property garages, as the Codesign Team dosen't have access to their resources and we can't have access to them without the developers permission, considering we haven't purchased them. But, we have made it extremely simply for you yourself to implement this into your property resource.
 
 |Spawning a vehicle| Storing a vehicle |
 |--|--|
 | `TriggerEvent('cd_garage:PropertyGarage', Action)` | `TriggerEvent('cd_garage:StoreVehicle_Main', 1, false)` |
-|*You must send either `‘quick’` or `’inside’` as the first argument. (Replacing `Action` above.)*|*The first and second argument must alays stay the same. (As seen above).*|
+|*You must send either `'quick'` or `'inside'` as the first argument. (Replacing `Action` above.)*|*The first and second argument must alays stay the same. (As seen above).*|
 
 ## Exports
 These exports are completely optional, and there for you if you wish to use them.
@@ -64,11 +64,11 @@ These exports are completely optional, and there for you if you wish to use them
 
 `exports['cd_garage']:GetGarageLimit(source)` - Returns the players garage limit amount from the users table in the database. You must send the players server id.
 
-`exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns. You must send the players server id, but the garage_type is optional. *(If the garage_type is nil, the players car count will be returned.  There garage_type can only be set to 3 values:  ( ‘car’ / ‘boat’ / ‘air’ ) and these values must be sent as a string).*
+`exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns. You must send the players server id, but the garage_type is optional. *(If the garage_type is nil, the players car count will be returned.  There garage_type can only be set to 3 values:  ( 'car' / 'boat' / 'air' ) and these values must be sent as a string).*
 
 > Client Side Exports
 
-`exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( ‘car’ / ‘boat’ / ‘air’ ). You must send the vehicle id.
+`exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ). You must send the vehicle id.
 
 `exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using tostring(GetVehicleNumberPlateText(vehicle)).
 
