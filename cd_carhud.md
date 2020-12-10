@@ -7,7 +7,7 @@
  
  **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **5** Add the script to your server start config: `ensure cd_carhud`. The name of the folder must not be changed or the script will not function correctly.
+ **5** Add the resource name to your server start config: `ensure cd_carhud`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## Required Edits
 
