@@ -34,7 +34,7 @@ There are already 2 examples of how you would do this, the default is using the 
  - **Default UI refresh rate** - The refresh rate of the ui can also play a huge factor in this. You can set the default refresh rate value for all players at the bottom of the `configs/ui_config.js`. The default value is 100*ms* but you can increase it to 250-500 to further reduce the ms from 0.05 to 0.02 while still not noticing any delay in the UI. You could also change the refresh rate to 1000ms and total ms usage will only be 0.01*ms*, but this time you will notice the delay when the UI values ae being updated.
 
 ### Key binds
-We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses. This new method we use is much more optimised and allows each client to change their own key binds [example here](https://imgur.com/GRWKelR).
+We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses. This new method we use is much more optimised and allows each client to change their own key binds [example here](https://imgur.com/GRWKelR). You can of course disable this method and trigger the event your self to open the settings `TriggerEvent('cd_carhud:OpenSettingsUI')`.
 
 
 ## Is the resource not working as expected?
