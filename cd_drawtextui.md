@@ -57,7 +57,7 @@ This can be triggered from the server or client. A more advanced example is post
             local ped = PlayerPedId()
             local inZone = false
             for cd = 1, #Config.YOURTABLE do
-                local dist = #(GetEntityCoords(ped)-vector3(Config.YOURTABLE[cd].x, Config.YOURTABLE[cd].y, Config.YOURTABLE[cd].z))
+                local dist = #(GetEntityCoords(ped)-vector3(Config.YOURTABLE.x, Config.YOURTABLE.y, Config.YOURTABLE.z))
                 if dist <= 5.0 then
                     wait = 5
                     inZone  = true
