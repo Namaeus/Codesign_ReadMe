@@ -37,4 +37,4 @@ Score and time taken determine the leaderboard placement, and the server owner c
 - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
 - Make sure the name of the folder is `cd_terminalhacker`.
 - Try enabling the test command in the config and see if it works that way.
-- If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
+- If all else fails, contact the Codesign Team in your private discord channel in the [Codesign Discord](https://discord.gg/HmDFGp62Tr).
