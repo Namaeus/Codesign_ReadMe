@@ -1,25 +1,25 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_playerhud.zip` folder.
 
-**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_playerhud` folder.
+**2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_playerhud` folder.
 
- **3.** Before starting the script, please read the `config.lua` (located inside the main cd_playerhud folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the script to suit your servers needs.
+ **3.** Before starting the resource, please read the `config.lua` (located inside the main cd_playerhud folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the resource to suit your servers needs.
  
  **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **5.** Add the script to your server start config: `start cd_playerhud`. The name of the folder must not be changed or the script will not function correctly.
+ **5.** Add the resource to your server start config: `ensure cd_playerhud`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## How to install
 
-*This script completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.*
+This resource completely replaces esx_status. It can also replace esx_basic needs if you choose (check the server sided customise_me if you wish to completely replace esx_basic needs). But if you choose to remain using esx_basic needs, you will have to replace the trigger events in the server side that adds hunger/thirst when using items.
 
-> TriggerClientEvent('cd_playerhud:status:add', source, Status_Type, Amount)
+> TriggerClientEvent('cd_playerhud:status:add', source,  Status_Type,  Amount)
 
-> TriggerClientEvent('cd_playerhud:status:remove', source, Status_Type, Amount)
+> TriggerClientEvent('cd_playerhud:status:remove', source,  Status_Type,  Amount)
 
-> TriggerClientEvent('cd_playerhud:status:set', source, Status_Type, Amount)
+> TriggerClientEvent('cd_playerhud:status:set', source,  Status_Type,  Amount)
 
-- *The `type` must be sent as a string and the `amount` must be sent as a number.*
+- *The `Status_Type` must be sent as a string and the `Amount` must be sent as a number.*
 - *Example: 0 is empty food and 100 is full food.*
 - *You can also trigger these events from the client to client, just like you would with any other events.*
 
@@ -46,13 +46,13 @@ end)
 **Below is an seperate additional event that may come in handy for you.**
 
 *You can use the `GetMoney()` function in the client customise_me.lua to get and set the money values on the watch UI, but if you wish to set them values via a trigger event, then this is the event you can use.*
-> TriggerClientEvent('cd_playerhud:SetCustomMoneyValues', source, Action_Type, Money_Type, Amount)
+> `TriggerClientEvent('cd_playerhud:SetCustomMoneyValues', source, Action_Type, Money_Type, Amount)`
 
-|Action_Type| Money_Type |
-|--|--|
-|‘add’|bank|
-|‘remove’|cash|
-|’set||
+|Action_Type| Money_Type |Amount|
+|--|--|--|
+|‘add’|'bank'|0-100|
+|‘remove’|'cash'|0-100|
+|’set||0-100|
 
 
 ## Default Key-binds
@@ -62,9 +62,9 @@ end)
 
 > Left/Right Arrows - Cycle through the screens.
 
-## Is the script not working as expected?
- - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
+## Is the resource not working as expected?
+ - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - Make sure the name of the folder is `cd_playerhud`.
- - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
--   If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
+ - If the resource has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other resources may be disabling that specific key.
+-   If all else fails, contact the Codesign Team in your private discord channel in the [Codesign Discord](https://discord.gg/HmDFGp62Tr).
 
