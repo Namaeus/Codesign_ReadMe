@@ -9,7 +9,7 @@
  
  **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **6.** Add the script to your server start config: `cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
+ **6.** Add the script to your server start config: `ensure cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
 ## How to use?
 This works like any other hacking mini game for FiveM, just more interactive. You would place the export (as seen below) in a robbery script for example, and if the player completes the hack, you can either reward the player or allow them to progress to the next stage. The scoreboard allows players to compete for the bragging rights of who is the best hacker.
