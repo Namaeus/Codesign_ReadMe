@@ -1,7 +1,7 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_terminalhacker.zip` folder.
 
-**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_terminalhacker` folder.
+**2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_terminalhacker` folder.
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_terminalhacker_SQLFILE`.
 
