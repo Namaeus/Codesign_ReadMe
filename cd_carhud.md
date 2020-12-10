@@ -13,7 +13,7 @@
 
 **Add your vehicle fuel checks into this function -** configs/client_customise_me.lua/line 52
 
-*There are already 2 examples of how you would do this, the default is using the FiveM native to get a vehices fuel, and the hashed out one is using the one from legacy fuel.*
+There are already 2 examples of how you would do this, the default is using the FiveM native to get a vehices fuel, and the hashed out one is using the one from legacy fuel.
 
     function GetFuel(vehicle)
 	    return GetVehicleFuelLevel(vehicle) --Default example.
