@@ -4,17 +4,17 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_multicharacter.zip` folder.
 
-**2.** Paste your Authorisation Token into the file named `authorization`. This is located inside the main `cd_multicharacter` folder.
+**2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_multicharacter` folder.
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_multicharacter_SQLFILE`.
 
 **4.** If you are using es_extended v1.2 or v1.final, then open up your database, go to your users table, and change the length/set of the `identifier` varchar from 40 to 50.
 
- **5.** Before starting the script, please read the `config.lua` (located inside the main cd_multicharacter folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the script to suit your servers needs.
+ **5.** Before starting the resource, please read the `config.lua` (located inside the main cd_multicharacter folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the resource to suit your servers needs.
  
  **6.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **7.** Add the script to your server start config: `start cd_multicharacter`. The name of the folder must not be changed or the script will not function correctly.
+ **7.** Add the resource to your server start config: `ensure cd_multicharacter`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## Step 1
 First we will need to do a small edit to stop es_extended regestering our character instantly instantly.
@@ -57,9 +57,9 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 
 **esx_skin**
 
-*There are 2 different versions for esx_skin, `loadskin2` and `loadskin3`. Both edited for different versions of esx_skin and skinchanger. You should try use `skinchanger:loadSkin2` first.
+There are 2 different versions for esx_skin, `'skinchanger:loadskin2'` and `'skinchanger:loadskin3'`. Both edited for different versions of esx_skin and skinchanger. You should try use `skinchanger:loadSkin2` first.
 
-> If your Config.SkinScript is set to `’esx’` then copy and paste this block of code below into the client side of your `skinchanger` resource.
+> If your `Config.Skinresource` is set to `’esx’` then copy and paste this block of code below into the client side of your `skinchanger` resource.
 
 	RegisterNetEvent('skinchanger:loadSkin2')
 	AddEventHandler('skinchanger:loadSkin2', function(multipedID, skin)
@@ -138,7 +138,7 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 		MultiPed = nil
 	end)
 
-> _If you have errors in the skinchanger resource related to  `blemishes`, use the `"skinchanger:loadSkin3"` block of code below, and replace the event name in client/customise_me/line 56 from “skinchanger:loadSkin2” to “skinchanger:loadSkin3”._
+> _If you have errors in the skinchanger resource related to  `blemishes`, use the `'skinchanger:loadSkin3'` block of code below, and replace the event name in client/customise_me/line 56 from `'skinchanger:loadSkin2'` to `'skinchanger:loadSkin3'`._
 
 	RegisterNetEvent('skinchanger:loadSkin3')
 	AddEventHandler('skinchanger:loadSkin3', function(multipedID, skin)
@@ -237,9 +237,9 @@ Ok now we need to copy and paste some code into your skin resource. We have mult
 
 **Other**
 
-*This “other” section is where we add compatibility for other skin scripts at the request of
- our customers.*
-> If your Config.SkinScript is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
+This 'other' section is where we add compatibility for other skin resources at the request of
+ our customers.
+> If your Config.Skinresource is set to `’other1’` or `’other2’` then copy and paste this block of code into your skin resource.
 > 
     RegisterNetEvent('otherclothing:MultiCharSkin')
     AddEventHandler('otherclothing:MultiCharSkin', function(ped, skin)
@@ -340,9 +340,9 @@ If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what
 
 - This is completely optional and we do not reccomend using this option unless you have advanced knowledge of lua.
 - **WARNING** if you are not 100% sure what you are doing here, please contact a member of the Codesign Team before implementing these changes.
-- When using this method, you will need to replace the native method of getting the steam id `GetPlayerIdentifiers(source[1]`, with `xPlayer.identifier` for all of your server sided scripts.
+- When using this method, you will need to replace the native method of getting the steam id `GetPlayerIdentifiers(source[1]`, with `xPlayer.identifier` for all of your server sided resources.
 
-**ESX version 1.1 - essentialmode/server/main.lua/line 41 - replace the existing block of code with this.**
+**ESX version 1.1 - essentialmode/server/main.lua/line 41** - replace the existing block of code with this.
 	
 	RegisterServerEvent('es:firstJoinProper')
 	AddEventHandler('es:firstJoinProper', function(charID)
@@ -370,7 +370,7 @@ If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what
 		end)
 	end)
 
-**ESX version 1.2 - es_extended/server/main.lua/line 1 - replace the existing block of code with this.**
+**ESX version 1.2 - es_extended/server/main.lua/line 1** - replace the existing block of code with this.
 
 	RegisterNetEvent('esx:playerJoined')
 	AddEventHandler('esx:playerJoined', function(charID)
@@ -406,7 +406,7 @@ If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what
 		end
 	end
 
-**ESX version 1.final - es_extended/server/main.lua/line 6 - replace the existing block of code with this.**
+**ESX version 1.final - es_extended/server/main.lua/line 6** - replace the existing block of code with this.
 	
 	RegisterNetEvent('esx:onPlayerJoined')
 	AddEventHandler('esx:onPlayerJoined', function(charID)
@@ -455,14 +455,14 @@ If `Config.UseAdvancedMultiCharMethod` is enabled, and you fully understand what
 
 ## Default Key-binds
 
-> Left/Right Arrows - Cycle through the screens.
+> Left/Right Arrows - Cycle through the characters.
 
 > Enter/Left Mouse - Select character.
 
-## Is the script not working as expected?
- - Firstly always make sure the script has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
+## Is the resource not working as expected?
+ - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
  - Make sure the name of the folder is `cd_multicharacter`.
- - If the script has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other scripts may be disabling that specific key.
--   If all else fails, contact the Codesign Team in your private discord channel in the Codesign discord.
+ - If the resource has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other resources may be disabling that specific key.
+-   If all else fails, contact the Codesign Team in your private discord channel in the [Codesign Discord](https://discord.gg/HmDFGp62Tr).
 
 
