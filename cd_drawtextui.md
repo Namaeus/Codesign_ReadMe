@@ -90,5 +90,5 @@ This can be triggered from the server or client. A more advanced example is post
 
 ## Is the resource not working as expected?
 - Make sure the name of the folder is `cd_drawtextui`.
+- Check the server console and the in game F8 console for errors.
 - If all else fails, contact the Codesign Team in the [Codesign Discord](https://discord.gg/HmDFGp62Tr).
-
