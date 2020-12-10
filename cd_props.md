@@ -2,7 +2,7 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_props.zip` folder.
 
-**2.** Paste your Authorisation Token into the file named `authorization,lua`. This is located inside the main `cd_props` folder.
+**2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_props` folder.
 
  **3.** Before starting the resource, please read the `config.lua` (located inside the main cd_props folder) and  configure the resource to suit your servers needs.
  
