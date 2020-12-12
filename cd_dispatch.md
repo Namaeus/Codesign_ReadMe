@@ -88,8 +88,15 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 > - **time** - The amount of time until the blip fades (default is 5 mins.)
 > - **sound** - The sound when receiving a notification (1 = 1 sound, 2 = 2 sounds, 3 = 3 sounds, 4 = panic button alert sound). *But these can be configured in the client/customise_me/line 38.*
 
+## Default Key binds
 
+> U - Open the Small UI.
 
+> L - Open the largw UI. This can only be opened while the small UI is open.
+
+> G - Respond to a notification.
+
+> Left/Right Arrows - Scrol through the notifications on the small UI.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
