@@ -37,6 +37,8 @@ There are already 2 examples of how you would do this, the default is using the 
 ### Key binds
 We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses. This new method we use is much more optimised and allows each client to change their own key binds [example here](https://imgur.com/GRWKelR). You can of course disable this method and trigger the event your self to open the settings `TriggerEvent('cd_carhud:OpenSettingsUI')`.
 
+### Will the settings save after i relog?
+Yes the settings will save after you relog, after a server restart and after you clear your client cache. It does not use the database to save this data.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
