@@ -68,7 +68,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 			blip = {
 				sprite = 431, 
 				scale = 1.2, 
-				colour = 3, -
+				colour = 3,
 				flashes = false, 
 				text = '911 - Store Robbery',
 				time = (5*60*1000),
