@@ -92,7 +92,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 
 > U - Open the Small UI.
 
-> L - Open the largw UI. This can only be opened while the small UI is open.
+> L - Open the large UI. This can only be opened while the small UI is open.
 
 > G - Respond to a notification.
 
