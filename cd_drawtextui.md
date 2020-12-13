@@ -7,7 +7,7 @@
 This can be triggered from the server or client. A more advanced example is posted below.
 |Show the UI| Hide the UI |
 |--|--|
-| `Triggerevent('cd_drawtextui:ShowUI', 'show', TEXT_HERE)` | `Triggerevent('cd_drawtextui:HideUI')` |
+| `TriggerEvent('cd_drawtextui:ShowUI', 'show', TEXT_HERE)` | `TriggerEvent('cd_drawtextui:HideUI')` |
 
 
 > **This is an example how to implement the UI for a single location.**
