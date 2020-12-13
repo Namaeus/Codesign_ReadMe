@@ -52,6 +52,7 @@ If you are using an older version of es_extended, the modifications below are re
 
 > If you use a paid property resource, then it's really the developer of said resource who will be best suited to help you with the property garages, as the Codesign Team dosen't have access to their resources and we can't have access to them without the developers permission, considering we haven't purchased them. But, we have made it extremely simply for you yourself to implement this into your property resource.
 
+*This is a client event.*
 |Spawning a vehicle| Storing a vehicle |
 |--|--|
 | `TriggerEvent('cd_garage:PropertyGarage', Action)` | `TriggerEvent('cd_garage:StoreVehicle_Main', 1, false)` |
