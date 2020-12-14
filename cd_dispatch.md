@@ -99,7 +99,7 @@ We have started using the fivem native called `RegisterKeyMapping` [documentatio
 
 > G - Respond to a notification.
 
-> Left/Right Arrows - Scrol through the notifications on the small UI.
+> Left/Right Arrows - Scroll through the notifications on the small UI.
 > 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
