@@ -88,7 +88,10 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 > - **time** - The amount of time until the blip fades (default is 5 mins.)
 > - **sound** - The sound when receiving a notification (1 = 1 sound, 2 = 2 sounds, 3 = 3 sounds, 4 = panic button alert sound). *But these can be configured in the client/customise_me/line 38.*
 
-## Default Key binds
+## Key binds
+We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses, therefor allowing the resource to be more optimised. This new method allows each client to change their own key binds in game [example here](https://imgur.com/GRWKelR). One thing to note is that you may not be able to have multiple keys bound to the same key. You can of course disable this method and trigger the event your self to open the settings. The key bind code is in the `configs/client_customise_me.lua`.
+
+### Default Key binds
 
 > U - Open the Small UI.
 
@@ -97,7 +100,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 > G - Respond to a notification.
 
 > Left/Right Arrows - Scrol through the notifications on the small UI.
-
+> 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
 - Make sure the name of the folder is `cd_dispatch`.
