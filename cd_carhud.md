@@ -20,7 +20,7 @@ There are already 2 examples of how you would do this, the default is using the 
 	    return GetVehicleFuelLevel(vehicle) --Default fivem native example.
 	    --return DecorGetFloat(vehicle, '_FUEL_LEVEL') --Legacy Fuel example.
 	    --return exports['frfuel']:ExportsGetCurrentFuelLevel() --FRFuel example.
-	    --return (You can return your own vehicle fuel checks here)
+	    --return --(You can return your own vehicle fuel checks here)
     end
 
 
