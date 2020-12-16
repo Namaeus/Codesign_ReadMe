@@ -1,8 +1,3 @@
-
-[details="Summary"]
-This text will be hidden
-[/details]
-
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_multicharacter.zip` folder.
 
