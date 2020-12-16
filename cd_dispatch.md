@@ -29,7 +29,7 @@ If so, you will need to be using some sort of voice radio resource. This event n
 This is only needed if your police don't switch jobs to go off duty, but instead have an on/off duty locale system.
 `TriggerEvent('cd_dispatch:OnDutyChecks, BOOLEAN)` *You must send as a Boolean (true or false).*
 
-## How to install
+## How to install - (this is a test example)
 
 **Step 1** - We need to get the data from the client and send it to the server.
 
