@@ -1,3 +1,4 @@
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_drawtextui.zip` folder.
  
@@ -46,7 +47,14 @@ This can be triggered from the server or client. A more advanced example is post
 	end)
 
 > **This is an example how to implement the UI while doing a for loop for multiple locations in 1 thread.**
-
+	
+	Config = {}
+	Config.Example = {
+		[1] = {coords =  vector3(1.1, 1.1, 1.1), distance = 5, key = 38, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
+		[2] = {coords =  vector3(2.2, 2.2, 2.2), distance = 5, key = 47, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
+		[3] = {coords =  vector3(3.3, 3.3, 3.3), distance = 5, key = 74, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
+	}
+    
     Citizen.CreateThread(function()
         local alreadyEnteredZone = false
         local text = nil
@@ -54,15 +62,15 @@ This can be triggered from the server or client. A more advanced example is post
             wait = 5
             local ped = PlayerPedId()
             local inZone = false
-            for cd = 1, #Config.YOURTABLE do
-                local dist = #(GetEntityCoords(ped)-vector3(Config.YOURTABLE.x, Config.YOURTABLE.y, Config.YOURTABLE.z))
-                if dist <= 5.0 then
+            for cd = 1, #Config.Example do
+                local dist = #(GetEntityCoords(ped)-vector3(Config.Example[cd].x, Config.Example[cd].y, Config.Example[cd].z))
+                if dist <= Config.Example[cd].distance then
                     wait = 5
                     inZone  = true
-                    text = '<b>Title</b></p>[E] Press E to be bald'
-    
-                    if IsControlJustReleased(0, 38) then
-                        TriggerEvent('add your event here')
+                    text = Config.Example[cd].text
+
+                    if IsControlJustReleased(0, Config.Example[cd].key) then
+                        TriggerEvent(Config.Example[cd].eventname)
                     end
                     break
                 else
@@ -74,7 +82,7 @@ This can be triggered from the server or client. A more advanced example is post
                 alreadyEnteredZone = true
                 TriggerEvent('cd_drawtextui:ShowUI', 'show', text)
             end
-    
+
             if not inZone and alreadyEnteredZone then
                 alreadyEnteredZone = false
                 TriggerEvent('cd_drawtextui:HideUI')
