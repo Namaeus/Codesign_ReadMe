@@ -64,7 +64,7 @@
 		wait = 5
 		local ped = PlayerPedId()
 		local inZone = false
-		for cd = 1, #Config.Table do
+		for cd = 1, #Config.Example do
 		    local dist = #(GetEntityCoords(ped)-vector3(Config.Example[cd].x, Config.Example[cd].y, Config.Example[cd].z))
 		    if dist <= 5.0 then
 			wait = 5
