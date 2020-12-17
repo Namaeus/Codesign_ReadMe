@@ -88,15 +88,15 @@ All of these chat commands can be disabled/enabled in the config. You can use th
 `/jobcar`  - Use the built in job vehicle garages to spawn vehicles for certain jobs.
 
 ## Events
-Again, these events are completely optional, and there for you if you wish to use them.
+Again, these events are completely optional, and there for you if you wish to use them.The top 3 events are already used in chat commands.
 
-`TriggerEvent('cd_garage:checkmileage')` - To check the vehicles mileage instead of using the chat command.
+`TriggerEvent('cd_garage:checkmileage')` - To check the vehicles mileage instead of using the chat command. (client event)
 
-`TriggerEvent('cd_garage:ImpoundVehicle')` - To impound vehicles instead of using the impount chat command.
+`TriggerEvent('cd_garage:ImpoundVehicle')` - To impound vehicles instead of using the impount chat command. (client event)
 
-`TriggerEvent('cd_garage:TransferVehicle', targetID)` - To transfer a vehicle instead of using the chat command. You must send the players server id.
+`TriggerEvent('cd_garage:TransferVehicle', targetID)` - To transfer a vehicle instead of using the chat command. You must send the players server id. (client event)
 
-`TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles.
+`TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles. (server event)
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
