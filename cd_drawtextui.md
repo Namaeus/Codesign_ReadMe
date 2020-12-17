@@ -50,9 +50,9 @@ This can be triggered from the server or client. A more advanced example is post
 	
 	Config = {}
 	Config.Example = {
-		[1] = {coords =  vector3(1.1, 1.1, 1.1), distance = 5, key = 38, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
-		[2] = {coords =  vector3(2.2, 2.2, 2.2), distance = 5, key = 47, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
-		[3] = {coords =  vector3(3.3, 3.3, 3.3), distance = 5, key = 74, eventname =  'example:testevent', text =  '<b>Title</b></p>[E] Press E to be bald'},
+		[1] = {coords = vector3(1.1, 1.1, 1.1), distance = 5, key = 38, eventname = 'example:testevent', text = '<b>Title</b></p>[E] Press E to be bald'},
+		[2] = {coords = vector3(2.2, 2.2, 2.2), distance = 5, key = 47, eventname = 'example:testevent', text = '<b>Title</b></p>[E] Press E to be bald'},
+		[3] = {coords = vector3(3.3, 3.3, 3.3), distance = 5, key = 74, eventname = 'example:testevent', text = '<b>Title</b></p>[E] Press E to be bald'},
 	}
     
     Citizen.CreateThread(function()
