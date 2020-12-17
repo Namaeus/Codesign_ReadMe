@@ -25,7 +25,7 @@ If you are using an older version of es_extended, the modifications below are re
 **es_extended/client/functions** - search for a function called `ESX.Game.GetVehicleProperties`.
 
     bodyHealth = ESX.Math.Round(GetVehicleBodyHealth(vehicle), 1),
-    engineHealth = ESX.Math.Round(GetVehicleEngineHealth(vehicle), 1),
+    engineHealth = ESX.Math.Round(GetEntityHealth(vehicle), 1),
     fuelLevel = ESX.Math.Round(GetVehicleFuelLevel(vehicle), 1),
 
 **es_extended/client/functions**   - search for a function called `ESX.Game.SetVehicleProperties`.
