@@ -5,17 +5,20 @@
 **2.** Add the resource to your server start config: `ensure cd_drawtextui`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## How to use?
-This can be triggered from the server or client. A more advanced example is posted below.
+
+- This can be triggered from the server or client. But this is a client event.
+-  Multiple examples are posted below, choose one best suited to your experience level. The easiest way for you to implement this into your resources, would be to use one of the examples below as a template, and copy and paste your code into it.
+
 |Show the UI| Hide the UI |
 |--|--|
 | `TriggerEvent('cd_drawtextui:ShowUI', 'show', TEXT_HERE)` | `TriggerEvent('cd_drawtextui:HideUI')` |
 
 
-> **This is an example how to implement the UI for a single location.**
+> **Example 1 : This is how to implement the UI for a single location.**
 
     Citizen.CreateThread(function()
 	    local alreadyEnteredZone = false
-	    local text = nil
+	    local text = '<b>Title</b></p>[E] Press E to be bald'
 	    while true do
 	        wait = 5
 	        local ped = PlayerPedId()
@@ -24,13 +27,12 @@ This can be triggered from the server or client. A more advanced example is post
 	        if dist <= 5.0 then
 	            wait = 5
 	            inZone  = true
-	            text = '<b>Title</b></p>[E] Press E to be bald'
 
 	            if IsControlJustReleased(0, 38) then
 	                TriggerEvent('add your event here')
 	            end
 	        else
-	            wait = 2000
+	            wait = 1000
 	        end
 	        
 	        if inZone and not alreadyEnteredZone then
@@ -46,29 +48,28 @@ This can be triggered from the server or client. A more advanced example is post
 	    end
 	end)
 
-> **This is an example how to implement the UI while doing a for loop for multiple locations in 1 thread.**
+> **Example 2 : This is how to implement the UI while doing a for loop for multiple locations in 1 thread.**
 	
 	Config = {}
-	Config.Table = {
-	    [1] = vector3(279.47, -974.27, 29.42),
-	    [2] = vector3(280.77, -974.63, 29.42),
-	    [3] = vector3(2.2, 2.2, 2.2),
+	Config.Example = {
+	    [1] = vector3(1.1, 1.1, 1.1),
+	    [2] = vector3(2.2, 2.2, 2.2),
+	    [3] = vector3(3.3, 3.3, 3.3),
 	}
 
 	Citizen.CreateThread(function()
 	    local alreadyEnteredZone = false
-	    local text = nil
+	    local text = '<b>Title</b></p>[E] Press E to be bald'
 	    while true do
 		wait = 5
 		local ped = PlayerPedId()
 		local inZone = false
-		for cd = 1, #Config.Table[cd] do
-		    local dist = #(GetEntityCoords(ped)-vector3(Config.Table[cd].x, Config.Table[cd].y, Config.Table[cd].z))
+		for cd = 1, #Config.Table do
+		    local dist = #(GetEntityCoords(ped)-vector3(Config.Example[cd].x, Config.Example[cd].y, Config.Example[cd].z))
 		    if dist <= 5.0 then
 			wait = 5
 			inZone  = true
-			text = '<b>Title</b></p>[E] Press E to be bald'
-
+	
 			if IsControlJustReleased(0, 38) then
 			    TriggerEvent('add your event here')
 			end
@@ -91,6 +92,8 @@ This can be triggered from the server or client. A more advanced example is post
 	    end
 	end)
 
+> **Example 3 : This is a more advanced method of the `example 2` above. This is more customisable and can handle all of the keypresses in said resource in a single thread.**
+
 	Config = {}
 	Config.Example = {
 		[1] = {coords = vector3(1.1, 1.1, 1.1), distance = 5, key = 38, eventname = 'example:testevent', text = '<b>Title</b></p>[E] Press E to be bald'},
@@ -106,7 +109,7 @@ This can be triggered from the server or client. A more advanced example is post
             local ped = PlayerPedId()
             local inZone = false
             for cd = 1, #Config.Example do
-                local dist = #(GetEntityCoords(ped)-vector3(Config.Example[cd].x, Config.Example[cd].y, Config.Example[cd].z))
+                local dist = #(GetEntityCoords(ped)-vector3(Config.Example[cd].coords.x, Config.Example[cd].coords.y, Config.Example[cd].coords.z))
                 if dist <= Config.Example[cd].distance then
                     wait = 5
                     inZone  = true
