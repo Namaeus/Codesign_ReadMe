@@ -1,5 +1,6 @@
 
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_carhud.zip` folder.
 
@@ -37,7 +38,10 @@ There are already 2 examples of how you would do this, the default is using the 
 
  - **Carhud UI (0.03*ms*)** - The refresh rate of the UI can also play a huge factor in optimisation. The default refresh rate value is 500*ms*. But you can set this default value for all players at the bottom of the `configs/ui_config.js`. The UI by itself with all elements and settings enabled will use 0.03*ms* during use. Each individual player can also modify this value, lowering it will result in the UI being more responsive at the cost of increased resource usage.
 
-### Key binds
+### Will the settings save after i relog?
+Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud . It does not use the database to save this data.
+
+## Key binds
 We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses, therefor allowing the resource to be more optimised. This new method allows each client to change their own key binds in game [example here](https://imgur.com/GRWKelR).
 
 - One thing to note is that players may not be able to have multiple keys bound to the same key.
@@ -46,8 +50,10 @@ We have started using the fivem native called `RegisterKeyMapping` [documentatio
 > `TriggerEvent('cd_carhud:OpenSettingsUI')`
 > `TriggerEvent('cd_carhud:ToggleSeatbelt')`
 
-### Will the settings save after i relog?
-Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud . It does not use the database to save this data.
+### Default Key-binds
+> E - Open the settings UI.
+
+> B - Toggle the seatbelt.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
