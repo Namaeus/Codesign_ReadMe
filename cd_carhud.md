@@ -1,4 +1,5 @@
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_carhud.zip` folder.
 
@@ -30,17 +31,23 @@ There are already 2 examples of how you would do this, the default is using the 
 > Yes you can, this can be done from `configs/ui_config.js.` If you already have saved settings in your cache, you will need to open the settings UI and click the default settings option for the new defaults to be set.
 
 ### Optimisation?
-> The balance between performance and optimisation is something that you need to decide. You simply can’t have the resource peforming at its peak performance by updating the UI every frame without that having an effect on the optimisation. Although, the resource has been created in such a way where you can allow your players to decide wether they want peak performance from the UI at the cost of loosing 1-2 fps or if they want to keep the fps at the cost of a small delay when updating the UI values. But there is a middle ground which we do recommend where you can get the best of both worlds with a little compromise.
+> The balance between performance and optimisation is something that you need to decide. You simply can’t have the resource peforming at its peak performance by updating the UI every frame without that having an effect on the optimisation. Although, the resource has been created in such a way where you can allow your players to decide whether they want peak performance from the UI at the cost of loosing 1-2 fps or if they want to keep the fps at the cost of the UI being less responsive when updating the UI values. But there is a middle ground which we do recommend where you can get the best of both worlds with a little compromise.
 
- - **Seat belt** - By default, the thread for the seat belt in `client/functions.lua` consumes the majority of the ms. It can be reduced by 0.02 by disabling `Config.DisableExitingVehicle`. The `Config.SeatbeltLoopTimer` can also be increased from 50 to 200 (or even more to reduce more ms) to reduce 0.02. The ms can be reduced by 0.06 in total by disabling the seatbelt completely if you don't wish to use it or you have a more optimised one - `Config.Seatbelt.ENABLE`.
+ - **Seat belt (0.05*ms*)** - By default, the thread for the seat belt in `client/functions.lua` consumes the majority of the ms. It can be reduced by 0.02*ms* by disabling `Config.DisableExitingVehicle`. The `Config.SeatbeltLoopTimer` can also be increased slightly to reduce 0.01*ms*. The ms can be reduced by 0.05*ms* in total by disabling the seatbelt completely if you don't wish to use it or you have a more optimised one - `Config.Seatbelt.ENABLE`.
 
- - **Default UI refresh rate** - The refresh rate of the ui can also play a huge factor in this. You can set the default refresh rate value for all players at the bottom of the `configs/ui_config.js`. The default value is 100*ms* but you can increase it to 250-500 to further reduce the ms from 0.05 to 0.02 while still not noticing any delay in the UI. You could also change the refresh rate to 1000ms and total ms usage will only be 0.01*ms*, but this time you will notice the delay when the UI values ae being updated.
+ - **Carhud UI (0.03*ms*)** - The refresh rate of the UI can also play a huge factor in optimisation. The default refresh rate value is 500*ms*. But you can set this default value for all players at the bottom of the `configs/ui_config.js`. The UI by itself with all elements and settings enabled will use 0.03*ms* during use. Each individual player can also modify this value, lowering it will result in the UI being more responsive at the cost of increased resource usage.
 
 ### Key binds
-We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses, therefor allowing the resource to be more optimised. This new method allows each client to change their own key binds in game [example here](https://imgur.com/GRWKelR). One thing to note is that you may not be able to have multiple keys bound to the same key. And in order to change the key in the config you may have to clear your cache for it to update in game. You can of course disable this method and trigger the event your self to open the settings `TriggerEvent('cd_carhud:OpenSettingsUI')`.
+We have started using the fivem native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses, therefor allowing the resource to be more optimised. This new method allows each client to change their own key binds in game [example here](https://imgur.com/GRWKelR).
+
+- One thing to note is that players may not be able to have multiple keys bound to the same key.
+- In order to change the key in the config, or disable it, you may have to clear your client cache for it to update in game.
+- Alternatively you can disable the RegisterKeyMapping method in the config and use other methods such as chat commands or while loops with keypresses to trigger these events highlighted  below.
+> `TriggerEvent('cd_carhud:OpenSettingsUI')`
+> `TriggerEvent('cd_carhud:ToggleSeatbelt')`
 
 ### Will the settings save after i relog?
-Yes the settings will save after you relog, after a server restart and after you clear your client cache. It does not use the database to save this data.
+Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud . It does not use the database to save this data.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
