@@ -1,6 +1,7 @@
 
 
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_dispatch.zip` folder.
 
@@ -101,7 +102,7 @@ We have started using the fivem native called `RegisterKeyMapping` [documentatio
 > `TriggerEvent('cd_dispatch:KEY_largeui')`
 > `TriggerEvent('cd_dispatch:KEY_responding')`
 
-## Default Key binds
+### Default Key binds
 
 > U - Open the Small UI.
 
