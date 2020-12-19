@@ -1,3 +1,4 @@
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_easytime.zip` folder.
 
@@ -6,7 +7,7 @@
 **3.** Add the resource to your server start config: `ensure cd_easytime`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## How do I use?
-The default command to open the UI is `/easytime`. If you are not using esx you will need to disable the `Config.UseESX` option and add your own code for the permissions check in `server/server.lua line 89`.
+The default command to open the UI is `/easytime`. If you are not using esx you will need to set `Config.Framework` to 'custom' and add your own code for the permissions check in `server/server.lua line 229`.
 
 ## How do I enable persistent weather?
 Firstly enable the `Config.PersistentWeather` option in the config.lua. Then in order to save the settings before a server restart, you must trigger this server event `TriggerServerEvent('cd_easytime:SaveSettings')`. The settings will be saved in the `settings.txt` file.  Now when the server/script restarts, these settings will automatically re apply for all players. Staff can also manually save these settings through the UI.
