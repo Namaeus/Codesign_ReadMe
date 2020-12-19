@@ -1,4 +1,5 @@
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_playerhud.zip` folder.
 
@@ -63,7 +64,7 @@ We have started using the fivem native called `RegisterKeyMapping` [documentatio
 - Alternatively you can disable the RegisterKeyMapping method in the config and use other methods such as chat commands or while loops with keypresses to trigger these events highlighted  below.
 > `TriggerEvent('cd_playerhud:OpenWatchUI')`
 
-## Default Key-binds
+### Default Key-binds
 > Tab - Toggle the watch ui.
 
 > K - Toggle move mode.
