@@ -5,7 +5,7 @@
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_multicharacter_SQLFILE`.
 
-**4.** If you are using es_extended v1.2 or v1.final, then open up your database, go to your users table, and change the length/set of the `identifier` varchar from 40 to 50.
+**4.** If you are using es_extended v1.2 or v1.final, then open up your database, go to your users table, and change the length/set of the `identifier` varchar from 40 to 50. And do the same for other tables which will be using multi character.
 
  **5.** Before starting the resource, please read the `config.lua` (located inside the main cd_multicharacter folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the resource to suit your servers needs.
  
