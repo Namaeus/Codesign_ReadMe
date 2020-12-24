@@ -31,7 +31,7 @@ If you are using an older version of es_extended, the modifications below are re
 **es_extended/client/functions**   - search for a function called `ESX.Game.SetVehicleProperties`.
 
     if props.bodyHealth then SetVehicleBodyHealth(vehicle, props.bodyHealth + 0.0) end
-    if props.engineHealth then SetVehicleEngineHealth(vehicle, props.engineHealth + 0.0) end
+    if props.engineHealth then SetEntityHealth(vehicle, props.engineHealth + 0.0) end
     if props.fuelLevel then SetVehicleFuelLevel(vehicle, props.fuelLevel + 0.0) end
 
 
