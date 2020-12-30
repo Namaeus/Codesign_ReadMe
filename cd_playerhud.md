@@ -5,7 +5,7 @@
 
 **2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_playerhud` folder.
 
- **3.** Before starting the resource, please read the `config.lua` (located inside the main cd_playerhud folder), the `config.js` (located inside the html/js folder) and the `customise_me` (located inside the server and client folders) and configure the resource to suit your servers needs.
+**3.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_playerhud` folder . Now you can configure the resource to suit your servers needs.
  
  **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
