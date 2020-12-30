@@ -1,6 +1,7 @@
 
 
 
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_carhud.zip` folder.
 
@@ -34,9 +35,9 @@ There are already 2 examples of how you would do this, the default is using the 
 ### Optimisation?
 > The balance between performance and optimisation is something that you need to decide. You simply can’t have the resource peforming at its peak performance by updating the UI every frame without that having an effect on the optimisation. Although, the resource has been created in such a way where you can allow your players to decide whether they want peak performance from the UI at the cost of loosing 1-2 fps or if they want to keep the fps at the cost of the UI being less responsive when updating the UI values. But there is a middle ground which we do recommend where you can get the best of both worlds with a little compromise.
 
- - **Seat belt (0.05*ms*)** - By default, the thread for the seat belt in `client/functions.lua` consumes the majority of the ms. It can be reduced by 0.02*ms* by disabling `Config.DisableExitingVehicle`. The `Config.SeatbeltLoopTimer` can also be increased slightly to reduce 0.01*ms*. The ms can be reduced by 0.05*ms* in total by disabling the seatbelt completely if you don't wish to use it or you have a more optimised one - `Config.Seatbelt.ENABLE`.
+ - **Seat belt (0.03*ms*)** - By default, the thread for the seat belt in `client/functions.lua` consumes the majority of the ms. It can be reduced by 0.02*ms* by disabling `Config.DisableExitingVehicle`. The ms can be reduced by 0.03*ms* in total by disabling the seatbelt completely if you don't wish to use it or you have a more optimised one - `Config.Seatbelt.ENABLE`.
 
- - **Carhud UI (0.03*ms*)** - The refresh rate of the UI can also play a huge factor in optimisation. The default refresh rate value is 500*ms*. But you can set this default value for all players at the bottom of the `configs/ui_config.js`. The UI by itself with all elements and settings enabled will use 0.03*ms* during use. Each individual player can also modify this value, lowering it will result in the UI being more responsive at the cost of increased resource usage.
+ - **Carhud UI (0.02*ms*)** - The refresh rate of the UI can also play a huge factor in optimisation. The default refresh rate value is 500*ms*. But you can set this default value for all players at the bottom of the `configs/ui_config.js`. The UI by itself with all elements and settings enabled will use 0.02*ms* during use. Each individual player can also modify this value, lowering it will result in the UI being more responsive at the cost of increased resource usage.
 
 ### Will the settings save after i relog?
 Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud . It does not use the database to save this data.
