@@ -9,7 +9,7 @@
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_dispatch_SQLFILE`.
 
-**4.** Before starting the resource, please read the `config.lua` (located inside the main cd_dispatch folder), the `config.js` (located inside the html folder) and the `customise_me` (located inside the server and client folders) and configure the resource to suit your servers needs.
+**4.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_dispatch` folder . Now you can configure the resource to suit your servers needs.
  
  **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
