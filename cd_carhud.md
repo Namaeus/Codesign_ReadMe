@@ -52,7 +52,7 @@ We have started using the fivem native called `RegisterKeyMapping` [documentatio
 > `TriggerEvent('cd_carhud:ToggleSeatbelt')`
 
 ### Default Key-binds
-> E - Open the settings UI.
+> Y - Open the settings UI.
 
 > B - Toggle the seatbelt.
 
