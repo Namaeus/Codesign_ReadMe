@@ -3,13 +3,11 @@
 
 **2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_terminalhacker` folder.
 
-**3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_terminalhacker_SQLFILE`.
-
- **4.** Before starting the script, please read the `config.lua` (this is located inside the main cd_terminalhacker folder) and the `config.js` (this is located inside html/js folder) and configure the script to suit your servers needs.
+ **3.** Before starting the script, please read the `config.lua` (this is located inside the main cd_terminalhacker folder) and the `config.js` (this is located inside html/js folder) and configure the script to suit your servers needs.
  
- **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+ **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **6.** Add the script to your server start config: `ensure cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
+ **5.** Add the script to your server start config: `ensure cd_terminalhacker`. The name of the folder must not be changed or the script will not function correctly.
 
 ## How to use?
 This works like any other hacking mini game for FiveM, just more interactive. You would place the export (as seen below) in a robbery script for example, and if the player completes the hack, you can either reward the player or allow them to progress to the next stage. The scoreboard allows players to compete for the bragging rights of who is the best hacker.
