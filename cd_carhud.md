@@ -68,8 +68,7 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 - According to a post on the FiveM forums you can remove unused keybinds [here](https://forum.cfx.re/t/registerkeymapping-question/1108639/10?u=ramp_rp). But we have not tested this, its on you if you wish to try it.
 
 ### Default key bindings
-> Y - Open the settings UI.
-
+> Y - Open the settings UI. 
 > B - Toggle the seatbelt.
 
 ## Is the resource not working as expected?
