@@ -109,9 +109,7 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 - Once you have disabled the RegisterKeyMapping method you can use other methods such as chat commands *(the name of the new chat command must be named differently from the original)* or while loops checking for key presses `IsControlJustReleased` or custom methods to trigger these events highlighted below.
 
 > `TriggerEvent('cd_dispatch:KEY_smallui')`
-
 > `TriggerEvent('cd_dispatch:KEY_largeui')`
-
 > `TriggerEvent('cd_dispatch:KEY_responding')`
 
 ### Notes
@@ -122,11 +120,8 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 ### Default Key bindings
 
 > U - Open the Small UI.
-
 > L - Open the large UI. This can only be opened while the small UI is open.
-
 > G - Respond to a notification.
-
 > Left/Right Arrows - Scroll through the notifications on the small UI.
 
 ## Is the resource not working as expected?
