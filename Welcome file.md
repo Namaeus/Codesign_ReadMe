@@ -3,7 +3,7 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 
 ## How to change keys with KeyMapping
 
-- **If you wish to change the default key bind, you must change it in the `configs/config.lua` before starting the resource on your server.**
+- **If you wish to change the default key bind, you must change it in the `configs/config.lua` BEFORE starting the resource on your server.**
 
 - Once you have started the resource on your server for the first time with the RegisterKeyMapping enabled, the key **cannot** be changed in the config. Now the only way the key can be changed while still using the KeyMapping is for players to change the key for themselves in the in game Gta5 key binding settings. [Example Here](https://imgur.com/GRWKelR)  `Open Gta5 settings > Key Bindings > FiveM`.
 
