@@ -108,8 +108,10 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 
 - Once you have disabled the RegisterKeyMapping method you can use other methods such as chat commands *(the name of the new chat command must be named differently from the original)* or while loops checking for key presses `IsControlJustReleased` or custom methods to trigger these events highlighted below.
 
-> `TriggerEvent('cd_dispatch:KEY_smallui')`	
-> `TriggerEvent('cd_dispatch:KEY_largeui')`	
+> `TriggerEvent('cd_dispatch:KEY_smallui')`
+
+> `TriggerEvent('cd_dispatch:KEY_largeui')`
+
 > `TriggerEvent('cd_dispatch:KEY_responding')`
 
 ### Notes
