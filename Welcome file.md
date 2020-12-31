@@ -5,15 +5,15 @@ We have started using the FiveM native called `RegisterKeyMapping` [documentatio
 
 - **If you wish to change the default key bind, you must change it in the `configs/config.lua` BEFORE starting the resource on your server.**
 
-- Once you have started the resource on your server for the first time with the RegisterKeyMapping enabled, the key **cannot** be changed in the config. Now the only way the key can be changed while still using the KeyMapping is for players to change the key for themselves in the in game Gta5 key binding settings. [Example Here](https://imgur.com/GRWKelR)  `Open Gta5 settings > Key Bindings > FiveM`.
+- Once you have started the resource on your server for the first time with the RegisterKeyMapping enabled, the key **cannot** be changed in the config. Now the only way the key can be changed while still using the KeyMapping is for players to change the key for themselves in the in game Gta5 key binding settings. [Example Here](https://imgur.com/GRWKelR) `Open Gta5 settings > Key Bindings > FiveM`.
 
 ## How to disable KeyMapping
 
--   This method can be disabled by removing the chat command/changing the name of the chat command and then restarting your server/restarting your chat resource.
+- This method can be disabled by removing the chat command/changing the name of the chat command and then restarting your server/restarting your chat resource.
     
--   The RegisterKeyMapping key bindings them self currently can not be removed from the Gta5 key bindings settings. Although once the chat command has been removed, it will not work anymore when you press the key.
+- The RegisterKeyMapping key bindings them self currently can not be removed from the Gta5 key bindings settings. Although once the chat command it was registered with has been removed, it will not work anymore when you press the key.
 
--  Once you have disabled the RegisterKeyMapping method you can use other methods such as chat commands *(the name of the new chat command must be named differently from the original)* or while loops checking for key presses `IsControlJustReleased` or custom methods to trigger these events highlighted below.
+- Once you have disabled the RegisterKeyMapping method you can use other methods such as chat commands *(the name of the new chat command must be named differently from the original)* or while loops checking for key presses `IsControlJustReleased` or custom methods to trigger these events highlighted below.
 
 > `TriggerEvent('cd_carhud:OpenSettingsUI')`  
 > `TriggerEvent('cd_carhud:ToggleSeatbelt')`
