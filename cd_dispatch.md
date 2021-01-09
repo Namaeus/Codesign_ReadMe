@@ -41,7 +41,7 @@ This is only needed if your police don't switch jobs to go off duty, but instead
 *By default, the export will include the players current location, but if you wish to send a set location, you can send the coordinates as a vector3 format.*
 `TriggerServerEvent('testevent', exports['cd_dispatch']:GetPlayerInfo(), vector3(0,0,0))`
 
-> The export shown above will return this table below. If the player is not in a vehicle it will not return any vehicle data.
+> The export shown above will return this table below. If the player is not in a vehicle it will not return any vehicle data. This export can be customised in the `client/functions/lua`.
 
     return {
 	    ped = ped,
