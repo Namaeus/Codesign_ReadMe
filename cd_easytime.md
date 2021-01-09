@@ -2,9 +2,9 @@
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_easytime.zip` folder.
 
- **2.** Before starting the script, please read the `config.lua` (this is located inside the main cd_easytime folder) and configure the script to suit your servers needs.
+**2.** Before starting the script, please read the `config.lua` (this is located inside the main cd_easytime folder) and configure the script to suit your servers needs.
  
-**3.** Add the resource to your server start config: `ensure cd_easytime`. The name of the folder must not be changed or the resource will not function correctly.
+**3.** Add the resource to your server start config: `ensure cd_easytime` (it must be placed below your framework resource). The name of the folder must not be changed or the resource will not function correctly.
 
 ## How do I use?
 The default command to open the UI is `/easytime`. If you are not using esx you will need to set `Config.Framework` to 'custom' and add your own code for the permissions check in `server/server.lua line 229`.
