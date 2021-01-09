@@ -6,9 +6,9 @@
 
 **3.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_props` folder . Now you can configure the resource to suit your servers needs.
  
- **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+**4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **5.** Add the resource to your server start config: `ensure cd_props`. The name of the folder must not be changed or the resource will not function correctly.
+**5.** Add the resource to your server start config: `ensure cd_props` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the resource will not function correctly.
 
 ## Default Key binds
 By default, you will be able to open the main props UI by using a key bind or a command, the command is `/prop` by default and the key binds are below.
