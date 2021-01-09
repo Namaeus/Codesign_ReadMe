@@ -13,7 +13,7 @@
  
  **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **6.** Add the resource to your server start config: `ensure cd_dispatch` (it must be placed below your framework resource). The name of the folder must not be changed or the resource will not function correctly.
+ **6.** Add the resource to your server start config: `ensure cd_dispatch` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the resource will not function correctly.
 
 ## Optional Modifications
 
