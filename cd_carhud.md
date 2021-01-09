@@ -7,11 +7,11 @@
 
 **2.** Paste your Authorisation Token into the file named `authorization.lua`. This is located inside the main `cd_carhud` folder.
 
- **3.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_carhud` folder. Now you can configure the resource to suit your servers needs.
+**3.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_carhud` folder. Now you can configure the resource to suit your servers needs.
  
- **4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+**4.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **5.** Add the resource name to your server start config: `ensure cd_carhud`. The name of the folder must not be changed or the resource will not function correctly.
+**5.** Add the resource name to your server start config: `ensure cd_carhud`. The name of the folder must not be changed or the resource will not function correctly.
 
 ## Required Edits
 
