@@ -9,7 +9,7 @@
  
 **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
-**6.** Add the resource to your server start config: `ensure cd_identity`. The name of the folder must not be changed or the resource will not function correctly.
+**6.** Add the resource to your server start config: `ensure cd_identity` (it must be placed below your framework resource). The name of the folder must not be changed or the resource will not function correctly.
 
 ## How to use?
 This can be triggered from the server or client. In the `server_customise_me.lua` file you will have access to customise the sql query, so you can decide what data gets saved to the database. But make sure you only trigger this event after your character has already been loaded in by esx, because esx will insert most of your characters data into the database, and we will update the database with the rest of the data that we have just created in the identity UI.
