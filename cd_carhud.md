@@ -40,7 +40,7 @@ There are already 2 examples of how you would do this, the default is using the 
  - **Carhud UI (0.02*ms*)** - The refresh rate of the UI can also play a huge factor in optimisation. The default refresh rate value is 500*ms*. But you can set this default value for all players at the bottom of the `configs/ui_config.js`. The UI by itself with all elements and settings enabled will use 0.02*ms* during use. Each individual player can also modify this value, lowering it will result in the UI being more responsive at the cost of increased resource usage.
 
 ### Will the settings save after i relog?
-Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud . It does not use the database to save this data.
+Yes the settings will save after you relog, after a server restart, after you clear your client cache and will even apply if you play on another server which uses cd_carhud. It does not use the database to save this data.
 
 ## Key bindings setup
 We have started using the FiveM native called `RegisterKeyMapping` [documentation here](http://runtime.fivem.net/doc/natives/?_0xD7664FD1). This removes the need for while loops checking every frame for keypresses, therefor allowing the resource to be more optimised. This FiveM native works by triggering the chat command it has been registered with when the keybind is pressed. This new method also allows each client to change their own key binds in game [Example Here](https://imgur.com/GRWKelR) `Open Gta5 settings > Key Bindings > FiveM`.
