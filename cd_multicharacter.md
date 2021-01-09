@@ -9,9 +9,9 @@
 
 **5.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_multicharacter` folder . Now you can configure the resource to suit your servers needs.
  
- **6.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
+**6.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
- **7.** Add the resource to your server start config: `ensure cd_multicharacter`. The name of the folder must not be changed or the resource will not function correctly.
+**7.** Add the resource to your server start config: `ensure cd_multicharacter` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the resource will not function correctly.
 
 ## Step 1
 First we will need to do a small edit to stop es_extended regestering our character instantly instantly.
