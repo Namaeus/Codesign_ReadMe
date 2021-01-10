@@ -98,6 +98,9 @@ Again, these events are completely optional, and there for you if you wish to us
 
 `TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles. (server event)
 
+## Notes
+- Any resources which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`.
+
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
 - If the resource has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other resources may be disabling that specific key.
