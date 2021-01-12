@@ -23,7 +23,7 @@ There are already 3 examples of how you would do this, the default is using the 
 	    return GetVehicleFuelLevel(vehicle) --Default fivem native example.
 	    --return DecorGetFloat(vehicle, '_FUEL_LEVEL') --Legacy Fuel example.
 	    --return return math.ceil((100 / GetVehicleHandlingFloat(vehicle, "CHandlingData", "fPetrolTankVolume")) * math.ceil(GetVehicleFuelLevel(vehicle))) --FRFuel example.
-	    --return --(You can return your own vehicle fuel checks here)
+	    --return --(You can also return your own vehicle fuel checks here)
     end
 
 
