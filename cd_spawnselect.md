@@ -9,7 +9,7 @@
  
 **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
 
-**6.** Add the script to your server start config: `start cd_spawnselect` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the script will not function correctly.
+**6.** Add the script to your server start config: `ensure cd_spawnselect` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the script will not function correctly.
 
 ## How to install
 This script supports ESX and any other framework, but the method of triggering these events are slightly different. If your database does not have the `position` column in your `users` table, then you will have to use the custom framework method. All you will need to do is send the players last saved position in the database as the first argument.
