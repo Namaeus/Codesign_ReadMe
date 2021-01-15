@@ -5,7 +5,7 @@
 
 **3.** Install the SQL file. This is located inside the `READ_ME_AFTER_PURCHASING` folder, it's named `cd_garage_SQLFILE`.
 
-**4.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_garage` folder . Now you can configure the resource to suit your servers needs.
+**4.** Before starting the resource, please read all of the configurable files inside the `configs` folder. This is located inside the main `cd_garage` folder. Now you can configure the resource to suit your servers needs.
  
  **5.** **WARNING** do not edit the obfuscated files in any way, as this will result in you being blacklisted.
  
