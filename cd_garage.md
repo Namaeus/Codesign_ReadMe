@@ -1,3 +1,4 @@
+
 # INSTALLATION GUIDE
 **1.** Unzip the `cd_garage.zip` folder.
 
@@ -14,13 +15,13 @@
 ## Install the dependencies
 There are 4 resources that this garage depends upon. These are provided in your purchase and are located inside the `zips` folder. Unzip these files, add them to your resources folder, then add them to the server start config also.
 
-    start cd_garage
-    start cd_garageshell
-    start cd_drawtextui
-    start cd_easytime
+    ensure cd_garage
+    ensure cd_garageshell
+    ensure cd_drawtextui
+    ensure cd_easytime
 
 ## Required modifications
-If you are using an older version of es_extended, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
+If you are using of es_extended v1.1, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
 
 **es_extended/client/functions** - search for a function called `ESX.Game.GetVehicleProperties`.
 
@@ -71,7 +72,7 @@ These exports are completely optional, and there for you if you wish to use them
 
 `exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ). You must send the vehicle id.
 
-`exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using tostring(GetVehicleNumberPlateText(vehicle)).
+`exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using *tostring(GetVehicleNumberPlateText(vehicle))*.
 
 ## Chat commands
 
@@ -79,27 +80,31 @@ All of these chat commands can be disabled/enabled in the config. You can use th
 
 `/impound`  - Use the built in vehicle impound system to impound a vehicle.
 
-`/transfervehicle (targetID)`  - Use the built in vehicle transfer system to transfer a vehicle to another player.
+`/transfervehicle (playerid)`  - Use the built in vehicle transfer system to transfer a vehicle to another player.
 
 `/checkmiles`  - Use the built in mileage system to check the mileage of the vehicle you are in.
 
-`/garagespace (add) (serverid)`  - If using garage space limt, players with defined jobs can sell garage slots to other players.
+`/garagespace (add) (playerid)`  - If using garage space limit, players with defined jobs can sell garage slots to other players.
 
-`/jobcar`  - Use the built in job vehicle garages to spawn vehicles for certain jobs.
+`/vehicle-add (playerid)`  - (Staff only) Add the vehicle you are currently sat inside to a players garage.
+
+`/vehicle-delete (playerid)`  - (Staff only) Delete the vehicle you are currently sat inside from the database.
+
+`/vehicle-plate (playerid)`  - (Staff only) Change the plate of the vehicle you are currently sat inside. This will also allow you to set custom plates such as [  TEST  ]. These custom plates must be in capitals and must be 8 characters long including whitespaces.
 
 ## Events
-Again, these events are completely optional, and there for you if you wish to use them.The top 3 events are already used in chat commands.
+Again, these events are completely optional, and there for you if you wish to use them. The top 3 events are already used in chat commands.
 
 `TriggerEvent('cd_garage:checkmileage')` - To check the vehicles mileage instead of using the chat command. *(client event)*
 
-`TriggerEvent('cd_garage:ImpoundVehicle')` - To impound vehicles instead of using the impount chat command. *(client event)*
+`TriggerEvent('cd_garage:ImpoundVehicle')` - To impound vehicles instead of using the impound chat command. *(client event)*
 
-`TriggerEvent('cd_garage:TransferVehicle', targetID)` - To transfer a vehicle instead of using the chat command. You must send the players server id. *(client event)*
+`TriggerEvent('cd_garage:TransferVehicle', playerid)` - To transfer a vehicle instead of using the chat command. You must send the players server id. *(client event)*
 
 `TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles. (server event)
 
 ## Notes
-- Any resources which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`.
+- Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
