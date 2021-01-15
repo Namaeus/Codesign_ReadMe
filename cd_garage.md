@@ -63,25 +63,33 @@ These exports are completely optional, and there for you if you wish to use them
 >Server Side Exports
 
 `exports['cd_garage']:GetGarageLimit(source)` - Returns the players garage limit amount from the users table in the database as a number.
+
 Argument [1] : Requires the players server id.
 
 `exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns as a number.
+
 Argument [1] : Requires the players server id.
+
 Argument [2] : The garage_type is optional. If the garage_type is nil, the players 'car' count will be returned.  There are only 3  acceptable garage_type's:  ( 'car' / 'boat' / 'air' ) and these values must be sent as a string.
 
 `exports['cd_garage']:GetMaxHealth(plate)` - Returns the vehicles max health from the cached advanced stats table.
+
 Argument [1] : Requires the vehicles plate.
 
 `exports['cd_garage']:GetVehicleOwner(source, plate)` - Returns true if the player owns this vehicle and false if the player does not.
+
 Argument [1] : Requires the players server id.
+
 Argument [2] : Requires the vehicles plate.
 
 > Client Side Exports
 
 `exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ).
+
 Argument [1] : Requires the vehicle id [example](https://runtime.fivem.net/doc/natives/?_0x9A9112A0FE9A4713).
 
 `exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate / mileage / maxhealth).
+
 Argument [1] : Requires the vehicles plate.
 
 ## Chat commands
