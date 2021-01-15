@@ -45,9 +45,7 @@ If you are using of es_extended v1.1, the modifications below are required. If t
 - There garage_type can only be set to 3 values: `'car'` `'boat'` `'air'` and these values must be sent as a string.
  - You can enter this value using your own method or you can use the export below.
  - If you choose to use the export below, it can only be used client side and you must send the vehicle id.
-
-
-	    exports['cd_garage']:GetGarageType(vehicle)
+`exports['cd_garage']:GetGarageType(vehicle)`
 
 **Do you want to use the property garages?**
 
@@ -64,15 +62,27 @@ These exports are completely optional, and there for you if you wish to use them
 
 >Server Side Exports
 
-`exports['cd_garage']:GetGarageLimit(source)` - Returns the players garage limit amount from the users table in the database. You must send the players server id.
+`exports['cd_garage']:GetGarageLimit(source)` - Returns the players garage limit amount from the users table in the database as a number.
+Argument [1] : Requires the players server id.
 
-`exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns. You must send the players server id, but the garage_type is optional. *(If the garage_type is nil, the players car count will be returned.  There garage_type can only be set to 3 values:  ( 'car' / 'boat' / 'air' ) and these values must be sent as a string).*
+`exports['cd_garage']:GetGarageCount(source, garage_type)` - Returns the amount of vehicles the player owns as a number.
+Argument [1] : Requires the players server id.
+Argument [2] : The garage_type is optional. If the garage_type is nil, the players 'car' count will be returned.  There are only 3  acceptable garage_type's:  ( 'car' / 'boat' / 'air' ) and these values must be sent as a string.
+
+`exports['cd_garage']:GetMaxHealth(plate)` - Returns the vehicles max health from the cached advanced stats table.
+Argument [1] : Requires the vehicles plate.
+
+`exports['cd_garage']:GetVehicleOwner(source, plate)` - Returns true if the player owns this vehicle and false if the player does not.
+Argument [1] : Requires the players server id.
+Argument [2] : Requires the vehicles plate.
 
 > Client Side Exports
 
-`exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ). You must send the vehicle id.
+`exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ).
+Argument [1] : Requires the vehicle id.
 
-`exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate /mileage /maxhealth). You must send the plate by using *tostring(GetVehicleNumberPlateText(vehicle))*.
+`exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate / mileage / maxhealth).
+Argument [1] : Requires the vehicles plate.
 
 ## Chat commands
 
@@ -104,10 +114,10 @@ Again, these events are completely optional, and there for you if you wish to us
 `TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles. (server event)
 
 ## Notes
-- Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`.
+- Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`. As in our garage we do not trim the plates, we store them as they are (8 characters long including whitespaces) as to allow the use of fully custom plates. So this is a simple fix for any resource that's having issues finding a vehicles plate.
 
 ## Is the resource not working as expected?
-- Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful`.
+- Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful 3`.
 - If the resource has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other resources may be disabling that specific key.
 - Make sure the name of the folder is `cd_garage`.
 - If all else fails, contact the Codesign Team in your private discord channel in the [Codesign Discord](https://discord.gg/HmDFGp62Tr).
