@@ -44,7 +44,7 @@ If you are using of es_extended v1.1, the modifications below are required. If t
 
 - There garage_type can only be set to 3 values: `'car'` `'boat'` `'air'` and these values must be sent as a string.
  - You can enter this value using your own method or you can use the export below.
- - If you choose to use the export below, it can only be used client side and you must send the vehicle id.
+ - If you choose to use the export below, it can only be used client side and you must send the vehicle id. [Example how to get the vehicles id.](https://runtime.fivem.net/doc/natives/?_0x9A9112A0FE9A4713)
 `exports['cd_garage']:GetGarageType(vehicle)`
 
 **Do you want to use the property garages?**
@@ -79,7 +79,7 @@ Argument [2] : Requires the vehicles plate.
 > Client Side Exports
 
 `exports['cd_garage']:GetGarageType(vehicle)` - Returns the type of vehicle ( 'car' / 'boat' / 'air' ).
-Argument [1] : Requires the vehicle id.
+Argument [1] : Requires the vehicle id [example](https://runtime.fivem.net/doc/natives/?_0x9A9112A0FE9A4713).
 
 `exports['cd_garage']:GetAdvStats(plate)` - Returns the mileage information table (plate / mileage / maxhealth).
 Argument [1] : Requires the vehicles plate.
