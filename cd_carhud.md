@@ -19,12 +19,11 @@
 
 There are already 3 examples of how you would do this, the default is using the FiveM native to get a vehices fuel, and the hashed out one is using the one from legacy fuel.
 
-    function GetFuel(vehicle)
-	    return GetVehicleFuelLevel(vehicle) --Default fivem native example.
-	    --return DecorGetFloat(vehicle, '_FUEL_LEVEL') --Legacy Fuel example.
-	    --return return math.ceil((100 / GetVehicleHandlingFloat(vehicle, "CHandlingData", "fPetrolTankVolume")) * math.ceil(GetVehicleFuelLevel(vehicle))) --FRFuel example.
-	    --return --(You can also return your own vehicle fuel checks here)
-    end
+	function GetFuel(vehicle)
+		return GetVehicleFuelLevel(vehicle) --Default fivem native example.
+		--return exports["LegacyFuel"]:GetFuel(vehicle) --Legacy Fuel example.
+		--return math.ceil((100 / GetVehicleHandlingFloat(vehicle, "CHandlingData", "fPetrolTankVolume")) * math.ceil(GetVehicleFuelLevel(vehicle))) --FRFuel example.
+	end
 
 
 ## FAQ
