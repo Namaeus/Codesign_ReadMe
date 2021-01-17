@@ -124,6 +124,8 @@ Again, these events are completely optional, and there for you if you wish to us
 ## Notes
 - Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`. As in our garage we do not trim the plates, we store them as they are (8 characters long including whitespaces) as to allow the use of fully custom plates. So this is a simple fix for any resource that's having issues finding a vehicles plate.
 
+- If you use a vehicle fuel resource you will need to modify the `GetFuel()` and `SetFuel()` functions in the `configs/client_customise_me.lua` to work with your current vehicle fuel resource.
+
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful 3`.
 - If the resource has started correctly, and there are no errors, try changing the keys in the config to one that you know works, as one of your other resources may be disabling that specific key.
