@@ -23,7 +23,7 @@ If so, trigger this event from the multicharacter resource after you have fully 
 
 **Are you using a on/off duty script for jobs?**
 
-If you use a on/off duty script for jobs, which changes a players job name from `police` to `offpolice` for example, then when a player goes back on duty you will need to trigger this client event `TriggerEvent('cd_dispatch:GrabInfo')` so the dispatch can grab and cache their data. Because when players first join it will only cache their data if their job is authorised to use the dispatch from the Config.AllowedJobs, so if a player joined and their job was `offpolice` it did not cache their data.
+If you use a on/off duty script for jobs, which changes a players job name from `police` to `offpolice` for example, then when a player goes back on duty you will need to trigger this client event `TriggerEvent('cd_dispatch:GrabInfo')` so the dispatch can grab and cache their data. Because when players first join it will only cache their data if their job is authorised to use the dispatch from the Config.AllowedJobs, so if a player joined and their job was `offpolice` it did not cache their data and this player would constantly see the notification saying "The script is still loading. Please try again in 10 seconds".
 
 ## Optional Modifications
 
