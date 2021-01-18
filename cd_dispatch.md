@@ -15,11 +15,17 @@
  
 **6.** Add the resource to your server start config: `ensure cd_dispatch` (it must be placed anywhere below your framework resource eg., es_extended, not above). The name of the folder must not be changed or the resource will not function correctly.
 
-## Optional Modifications
+## Requied Modifications
 
 **Are you using a multi-character resource?**
 
 If so, trigger this event from the multicharacter resource after you have fully spawned in. `TriggerEvent('cd_dispatch:GrabInfo')`
+
+**Are you using a on/off duty script for jobs?**
+
+If you use a on/off duty script for jobs, which changes your job name from `police` to `offpolice` for example, then when a player goes back on duty you will need to trigger this client event `TriggerEvent('cd_dispatch:GrabInfo')` so the dispatch can grab and cache their data. Because when they first jon it only caches their data if their job is authorised to use the dispatch from the Config.AllowedJobs, so if they first joined their job was `offpolice` it did not cache their data then.
+
+## Optional Modifications
 
 **Do you want to display which radio channels each player (who has access to use the dispatch) is in?**
 
