@@ -22,7 +22,7 @@ There are 4 resources that this garage depends upon. These are provided in your 
 
 ## Required modifications
 
-### Es_extended Props
+### Es_extended Vehicle Props
 
 If you are using of es_extended v1.1, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
 
