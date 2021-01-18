@@ -22,7 +22,7 @@ There are 4 resources that this garage depends upon. These are provided in your 
 
 ## Required modifications
 
-# Es_extended Props
+### Es_extended Props
 
 If you are using of es_extended v1.1, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
 
@@ -38,11 +38,11 @@ If you are using of es_extended v1.1, the modifications below are required. If t
     if props.engineHealth then SetEntityHealth(vehicle, props.engineHealth + 0.0) end
     if props.fuelLevel then SetVehicleFuelLevel(vehicle, props.fuelLevel + 0.0) end
 
-# Vehicle Plates
+### Vehicle Plates
 
 Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`. As in our garage we do not trim the plates, we store them as they are (8 characters long including whitespaces) as to allow the use of fully custom plates. So this is a simple fix for any resource that's having issues finding a vehicles plate.
 
-# Vehicle Fuel
+### Vehicle Fuel
 
 If you use a vehicle fuel resource you will need to modify the `GetFuel()` and `SetFuel()` functions in the `configs/client_customise_me.lua` to work with your current vehicle fuel resource.
 
