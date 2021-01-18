@@ -21,6 +21,9 @@ There are 4 resources that this garage depends upon. These are provided in your 
     ensure cd_easytime
 
 ## Required modifications
+
+# Es_extended Props
+
 If you are using of es_extended v1.1, the modifications below are required. If the lines of code below are not already inside said functions, then copy and paste them into them.
 
 **es_extended/client/functions** - search for a function called `ESX.Game.GetVehicleProperties`.
@@ -35,6 +38,13 @@ If you are using of es_extended v1.1, the modifications below are required. If t
     if props.engineHealth then SetEntityHealth(vehicle, props.engineHealth + 0.0) end
     if props.fuelLevel then SetVehicleFuelLevel(vehicle, props.fuelLevel + 0.0) end
 
+# Vehicle Plates
+
+Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`. As in our garage we do not trim the plates, we store them as they are (8 characters long including whitespaces) as to allow the use of fully custom plates. So this is a simple fix for any resource that's having issues finding a vehicles plate.
+
+# Vehicle Fuel
+
+If you use a vehicle fuel resource you will need to modify the `GetFuel()` and `SetFuel()` functions in the `configs/client_customise_me.lua` to work with your current vehicle fuel resource.
 
 ## Optional modifications
 
@@ -120,11 +130,6 @@ Again, these events are completely optional, and there for you if you wish to us
 `TriggerEvent('cd_garage:TransferVehicle', playerid)` - To transfer a vehicle instead of using the chat command. You must send the players server id. *(client event)*
 
 `TriggerServerEvent('cd_garage:SaveAllMiles')` - This event can be triggered 1 minute before a server restart to force save the mileage of every players vehicles. (server event)
-
-## Notes
-- Any resources (such as vehicle shops, vehicle locking, vehicle keys) which send the plate from the client to server, you will need to replace `ESX.Math.Trim` with `tostring` (eg.,`tostring(GetVehicleNumberPlateText(vehicle))`. As in our garage we do not trim the plates, we store them as they are (8 characters long including whitespaces) as to allow the use of fully custom plates. So this is a simple fix for any resource that's having issues finding a vehicles plate.
-
-- If you use a vehicle fuel resource you will need to modify the `GetFuel()` and `SetFuel()` functions in the `configs/client_customise_me.lua` to work with your current vehicle fuel resource.
 
 ## Is the resource not working as expected?
 - Firstly always make sure the resource has started correctly. Check for obvious error prints. Then check the server console prints for a blue print saying `Authorised Successfully` and check for a client sided print saying `Successful 3`.
